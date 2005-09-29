@@ -1,0 +1,121 @@
+#!/usr/bin/make -f
+#
+# Modified by iprofeta@debian.org to use debhelper Tue Aug 02 2005 
+# Modified by preining@logic.at 28.08.2005
+#
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# This is the debhelper compatibility version to use.
+export DH_COMPAT=4
+
+
+
+package=cm-super
+x11package=cm-super-x11
+
+CMD=debian/$(package)/usr/share/texmf/fonts/type1/public/cm-super/cm-super.t1c
+CMT=cm-super.t1c
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	$(MAKE) -f debian/rules $(CMT)
+	touch build-stamp
+
+pfb2t1c: debian/pfb2t1c.c; sh $<
+t1c2pfb: debian/t1c2pfb.c; sh $<
+$(CMT): pfb2t1c
+	mkdir -p $(dir $(CMT))
+	touch $(CMT)
+	(cd pfb; for F in *.pfb; do echo "$$F" >&2; ../pfb2t1c "$$F"; done) >$@
+
+clean:
+	dh_testdir
+	dh_testroot
+	-rm -f build-stamp install-stamp install-stamp-cmsuper install-stamp-cmsuperx11
+	-$(MAKE) clean
+	dh_clean
+	-rm -f t1c2pfb pfb2t1c
+	-rm -f cm-super.t1c
+
+install: install-stamp
+install-stamp: install-stamp-cmsuper install-stamp-cmsuperx11
+	touch install-stamp
+
+install-stamp-cmsuperx11: build-stamp
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+	cd pfb ; for i in *1000.pfb *10.pfb ; do \
+		ln -s ../../../../../share/texmf/fonts/type1/public/cm-super/$$i \
+		  ../debian/$(x11package)/usr/X11R6/lib/X11/fonts/Type1/$$i ; \
+	done
+	for i in afm/*1000.afm.gz afm/*10.afm.gz ; do \
+		bn=`basename $$i .gz` ; \
+		gunzip -c $$i > debian/$(x11package)/usr/X11R6/lib/X11/fonts/Type1/$$bn ; \
+	done
+	# install the override file for lintian
+	cp debian/$(x11package).override debian/$(x11package)/usr/share/lintian/overrides/$(x11package)
+	# following features is taken from gs-fonts-x11
+	perl -e 'my $$lines=""; my $$count=0; \
+		while (<>) { \
+		   next if /^\d+$$/; \
+		   $$lines.=$$_; $$count++; \
+		   if(/iso8859-1/) { \
+		      s/iso8859-1/iso8859-15/g; \
+		      $$lines.=$$_; $$count++; \
+		   } \
+		} \
+		print "$$count\n$$lines";' \
+		< debian/fonts.scale \
+		> debian/$(x11package)/etc/X11/fonts/Type1/cm-super-x11.scale
+	touch install-stamp-cmsuperx11
+
+
+install-stamp-cmsuper: build-stamp
+	dh_testdir 
+	dh_testroot
+	dh_installdirs
+	cd pfb ; for i in *.pfb ; do \
+		touch ../debian/$(package)/usr/share/texmf/fonts/type1/public/cm-super/$$i ; \
+	done
+	ln $(CMT) $(CMD)
+# ^^^ ln occupies less space on disk than cp_r
+	cp debian/t1c2pfb.pl debian/$(package)/usr/bin/t1c2pfb
+	cp debian/t1c2pfb.man debian/$(package)/usr/share/man/man1/t1c2pfb.1
+	chmod 755 debian/$(package)/usr/bin/t1c2pfb
+	chown 0.0 $(CMT)
+	cp type1ec.sty debian/$(package)/usr/share/texmf/tex/latex/cm-super
+	cp dvips/*.map debian/$(package)/etc/texmf/map/dvips/cm-super
+	cp dvips/*.enc debian/$(package)/usr/share/texmf/fonts/enc/dvips/cm-super/
+	cp dvips/config.cm-super debian/$(package)/etc/texmf/dvips
+	cp debian/updmap-config.cfg debian/$(package)/etc/texmf/updmap.d/50$(package).cfg
+	echo "50$(package)" > debian/$(package)/var/lib/tex-common/fontmap-cfg/$(package).list
+	# install the override file for lintian
+	cp debian/$(package).override debian/$(package)/usr/share/lintian/overrides/$(package)
+	touch install-stamp-cmsuper
+
+
+binary-indep:  build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs FAQ README TODO
+	dh_installchangelogs ChangeLog
+	dh_installxfonts --package=$(x11package)
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	# here we should fix the installed sizes!
+	dh_md5sums -X usr/share/texmf/fonts/type1/public/cm-super
+	( cd pfb ; for i in *.pfb ; do cat $$i | md5sum - | sed -e "s|-|usr/share/texmf/fonts/type1/public/cm-super/$$i|" ; done ) >> debian/$(package)/DEBIAN/md5sums
+	( cd debian/$(package) ; md5sum usr/share/texmf/fonts/type1/public/cm-super/cm-super.t1c ) >> debian/$(package)/DEBIAN/md5sums
+	# here we should fix the md5sums
+	dh_builddeb
+
+binary-arch:
+
+binary: binary-indep binary-arch
+
+.PHONY: build clean binary-indep binary-arch binary install 

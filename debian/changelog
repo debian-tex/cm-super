@@ -1,0 +1,78 @@
+cm-super (0.3.3-6) unstable; urgency=low
+
+  * changed README.debian, TODO, copyright
+  * fixed old FSF address in copyright file
+  * add cm-super-x11 package to make the fonts available from X11
+  * removed magic perl header from t1c2pfb.pl
+  * created a minimal man page for t1c2pfb (perl script installed in /usr/bin)
+  * added lintian overrides
+    cm-super: for the md5sum check
+    cm-super source: old debian/postinst script is buggy, it is replaced
+    cm-super-x11: install into X11R6
+
+ -- Norbert Preining <preining@logic.at>  Thu, 29 Sep 2005 16:51:44 +0200
+
+cm-super (0.3.3-5) unstable; urgency=low
+
+  * changed postinst, postrm to work with tetex2
+
+ -- Norbert Preining <preining@logic.at>  Mon, 26 Sep 2005 12:18:24 +0200
+
+cm-super (0.3.3-4) unstable; urgency=low
+
+  * Hack around that the pfb files are generated at install time and the
+    md5sums are wrong if we ship empty files instead.
+
+ -- Norbert Preining <preining@logic.at>  Sun, 25 Sep 2005 18:20:45 +0200
+
+cm-super (0.3.3-3) unstable; urgency=low
+
+  * Switched back to compressed t1c version of fonts, and the fonts are
+    generated in the postinst script
+
+ -- Norbert Preining <preining@logic.at>  Thu, 15 Sep 2005 19:16:20 +0200
+
+cm-super (0.3.3-2) unstable; urgency=low
+
+  * Fix missing MagicComment in updmap config file
+
+ -- Norbert Preining <preining@logic.at>  Thu, 15 Sep 2005 18:52:23 +0200
+
+cm-super (0.3.3-1) unstable; urgency=low
+
+  * New package name, conformance with new TeX Policy
+  * bump Standards Version to 3.6.2.1 and debhelper compat to 4 
+  * add Replaces for pts-tetex-cm-super
+  * install map and enc files in the correct locations
+
+ -- Norbert Preining <preining@logic.at>  Fri, 26 Aug 2005 08:31:28 +0200
+
+pts-tetex-cm-super (0.3.3-4) unstable; urgency=low
+
+  * Full pdftex, dvips and dvipdfm support.
+
+ -- Szabó Péter <pts@fazekas.hu>  Sun, 30 Mar 2003 14:53:28 +0200
+
+pts-tetex-cm-super (0.3.3-3) unstable; urgency=low
+
+  * debian/control updated
+  * debain/postinst calls /etc/texmf/dvips/updmap
+
+ -- Szabó Péter <pts@fazekas.hu>  Sun, 30 Mar 2003 14:06:14 +0200
+
+pts-tetex-cm-super (0.3.3-2) unstable; urgency=low
+
+  * Added t2c2pfb.pl
+
+ -- Szabó Péter <pts@fazekas.hu>  Sun, 30 Mar 2003 13:02:24 +0200
+
+pts-tetex-cm-super (0.3.3-1) unstable; urgency=low
+
+  * Initial Debian package (24 Mb).
+  * t1c2pfb.c
+
+ -- Szabó Péter <pts@fazekas.hu>  Sat, 29 Mar 2003 22:32:12 +0100
+
+Local variables:
+mode: debian-changelog
+End:

@@ -1,0 +1,3 @@
+cm-super-x11: packages-installs-file-to-usr-x11r6 usr/X11R6/
+cm-super-x11: packages-installs-file-to-usr-x11r6 usr/X11R6/lib/
+cm-super-x11: packages-installs-file-to-usr-x11r6 usr/X11R6/lib/X11/

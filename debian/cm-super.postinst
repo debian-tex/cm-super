@@ -1,0 +1,37 @@
+#! /bin/bash -e
+# by pts@fazekas.hu at Sun Mar 30 13:08:59 CEST 2003
+# set -e : exit on first error
+
+# Extract the .pfb files
+
+case "$1" in
+    configure)
+    	cd /usr/share/texmf/fonts/type1/public/cm-super
+	export PERL_BADLANG=x
+	perl -x /usr/bin/t1c2pfb <cm-super.t1c
+	mktexlsr
+	update-updmap
+	# if the -sys variant exists (texlive, tetex3) call it, 
+	# otherwise call the original updmap
+	if which updmap-sys > /dev/null 2>&1 ; then
+	    updmap-sys
+	else
+	    updmap
+	fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+
+
+#DEBHELPER#
+
+exit 0
