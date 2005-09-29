@@ -1,6 +1,9 @@
 TODO for debian cm-super package:
 ---------------------------------
-
+* Variants of sharp-s ß are present, how to make them available?
 * Do *not* recreate the pfb fonts und upgrade, only on new install!
+  (carefull on major version changes!)
+* * lintian warning
+W: cm-super: manpage-has-errors-from-man usr/share/man/man1/t1c2pfb.1.gz /tmp/zmanlAr6Jy:16: warning: can't find numbered character 243
 
 
