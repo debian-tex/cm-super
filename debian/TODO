@@ -6,4 +6,9 @@ TODO for debian cm-super package:
 * * lintian warning
 W: cm-super: manpage-has-errors-from-man usr/share/man/man1/t1c2pfb.1.gz /tmp/zmanlAr6Jy:16: warning: can't find numbered character 243
 
+* ev. depend on new package pfb2t1c2pfb, or at least recommend it, and if
+  not present call the perl script
+
+* install t1c2pfb.pl NOT as t1c2pfb, and fix man page, or take the one
+  Ralf hopefully writes more complete.
 

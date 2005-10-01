@@ -1,15 +1,15 @@
 .TH "t1c2pfb.pl" "1" "September 2005" "cm-super" "cm-super" 
 .PP 
 .SH "NAME" 
-t1c2pfb.pl \- convert from small .t1c to binary Type1 PFB
+t1c2pfb \- convert from small .t1c to binary Type1 PFB
 .PP 
 .SH "SYNOPSIS" 
 .PP 
-\fBt1c2pfb.pl\fP 
+\fBt1c2pfb\fP 
 .PP 
 .SH "DESCRIPTION" 
 .PP 
-\fBt1c2pfb.pl\fP extracts fonts saved in a t1c file (compressed version
+\fBt1c2pfb\fP extracts fonts saved in a t1c file (compressed version
 of type1 files).
 .PP 
 .SH COPYRIGHT
