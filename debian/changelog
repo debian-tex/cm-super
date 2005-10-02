@@ -1,3 +1,9 @@
+cm-super (0.3.3-2) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Norbert Preining <norbert@gandalf>  Sun,  2 Oct 2005 23:04:23 +0200
+
 cm-super (0.3.3-1) unstable; urgency=low
 
   * Suggest pfb2t1c2pfb for binary conversion program. In the postinst
