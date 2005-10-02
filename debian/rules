@@ -57,19 +57,7 @@ install-stamp-cmsuperx11: build-stamp
 	done
 	# install the override file for lintian
 	cp debian/$(x11package).override debian/$(x11package)/usr/share/lintian/overrides/$(x11package)
-	# following features is taken from gs-fonts-x11
-	perl -e 'my $$lines=""; my $$count=0; \
-		while (<>) { \
-		   next if /^\d+$$/; \
-		   $$lines.=$$_; $$count++; \
-		   if(/iso8859-1/) { \
-		      s/iso8859-1/iso8859-15/g; \
-		      $$lines.=$$_; $$count++; \
-		   } \
-		} \
-		print "$$count\n$$lines";' \
-		< debian/fonts.scale \
-		> debian/$(x11package)/etc/X11/fonts/Type1/cm-super-x11.scale
+	cp debian/fonts.scale debian/$(x11package)/etc/X11/fonts/Type1/cm-super-x11.scale
 	touch install-stamp-cmsuperx11
 
 
@@ -82,9 +70,9 @@ install-stamp-cmsuper: build-stamp
 	done
 	ln $(CMT) $(CMD)
 # ^^^ ln occupies less space on disk than cp_r
-	cp debian/t1c2pfb.pl debian/$(package)/usr/bin/t1c2pfb
-	cp debian/t1c2pfb.man debian/$(package)/usr/share/man/man1/t1c2pfb.1
-	chmod 755 debian/$(package)/usr/bin/t1c2pfb
+	cp debian/t1c2pfb.pl debian/$(package)/usr/bin/t1c2pfb.pl
+	cp debian/t1c2pfb.man debian/$(package)/usr/share/man/man1/t1c2pfb.pl.1
+	chmod 755 debian/$(package)/usr/bin/t1c2pfb.pl
 	chown 0.0 $(CMT)
 	cp type1ec.sty debian/$(package)/usr/share/texmf/tex/latex/cm-super
 	cp dvips/*.map debian/$(package)/etc/texmf/map/dvips/cm-super
@@ -107,11 +95,12 @@ binary-indep:  build install
 	dh_fixperms
 	dh_installdeb
 	dh_gencontrol
-	# here we should fix the installed sizes!
+	# make md5sums for all but the pfb files and the t1c file
 	dh_md5sums -X usr/share/texmf/fonts/type1/public/cm-super
+	# create the correct md5sums for the files generated on postinst
 	( cd pfb ; for i in *.pfb ; do cat $$i | md5sum - | sed -e "s|-|usr/share/texmf/fonts/type1/public/cm-super/$$i|" ; done ) >> debian/$(package)/DEBIAN/md5sums
+	# add the md5sum for the t1c file
 	( cd debian/$(package) ; md5sum usr/share/texmf/fonts/type1/public/cm-super/cm-super.t1c ) >> debian/$(package)/DEBIAN/md5sums
-	# here we should fix the md5sums
 	dh_builddeb
 
 binary-arch:

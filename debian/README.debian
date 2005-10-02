@@ -29,6 +29,12 @@ Example LaTeX file using these fonts
   all Hungarian accented wovels.
 \end{document}
 
+German Double-S (ß) variants (from INSTALL)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you wish to use the original CM germandbls (sharp s) shape,
+rather than the new EC one, change "germandbls" to "germandbls.alt"
+in cm-super-t1.enc (at the end, penultimate line).
+
 Why is the Debian .deb file half as long as the original .tar.gz?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Because the .deb contains cm-super.t1c in place of the original *.pfb files.

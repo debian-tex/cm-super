@@ -7,8 +7,12 @@
 case "$1" in
     configure)
     	cd /usr/share/texmf/fonts/type1/public/cm-super
-	export PERL_BADLANG=x
-	perl -x /usr/bin/t1c2pfb <cm-super.t1c
+	if which t1c2pfb > /dev/null 2>&1 ; then
+	    t1c2pfb <cm-super.t1c
+	else
+	    export PERL_BADLANG=x
+	    perl -x /usr/bin/t1c2pfb.pl <cm-super.t1c
+	fi
 	mktexlsr
 	update-updmap
 	# if the -sys variant exists (texlive, tetex3) call it, 
