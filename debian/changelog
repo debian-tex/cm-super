@@ -1,8 +1,8 @@
 cm-super (0.3.3-2) UNRELEASED; urgency=low
 
-  * NOT RELEASED YET
+  * list all map files in updmap config file (Closes: #332670)
 
- -- Norbert Preining <norbert@gandalf>  Sun,  2 Oct 2005 23:04:23 +0200
+ -- Norbert Preining <preining@logic.at>  Sat,  8 Oct 2005 02:50:26 +0200
 
 cm-super (0.3.3-1) unstable; urgency=low
 
