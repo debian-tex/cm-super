@@ -3,8 +3,9 @@ cm-super (0.3.3-2) UNRELEASED; urgency=low
   * list all map files in updmap config file (Closes: #332670)
   * depend on tetex >= 3, as the location of the enc files are not found
     in tetex < 3. Add a README.teTeX2 for backporters. (Closes: #332673)
+  * add tex-common to dependencies (direct deps should not be used)
 
- -- Norbert Preining <preining@logic.at>  Sun,  9 Oct 2005 10:57:15 +0200
+ -- Norbert Preining <preining@logic.at>  Mon, 10 Oct 2005 18:33:20 +0200
 
 cm-super (0.3.3-1) unstable; urgency=low
 
