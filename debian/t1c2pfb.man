@@ -13,10 +13,8 @@ t1c2pfb \- convert from small .t1c to binary Type1 PFB
 of type1 files).
 .PP 
 .SH COPYRIGHT
-Copyright \(co 2003 Szabó Péter.
-There is NO warranty.  You may redistribute this software
-under the terms of the GNU General Public License.
-For more information about these matters, see the files named COPYING.
+This program was created by Szab\('o P\('eter and is under public domain.
+You may freely use, modify and/or distribute it.
 .SH "BUGS" 
 .PP 
 Problems with this script should be reported to the author or to the

@@ -1,8 +1,11 @@
 TODO for debian cm-super package:
 ---------------------------------
+* Install the afm files also to /usr/share/texmf and only make links
+  in /usr/X11R6
 * Variants of sharp-s ß are present, how to make them available?
+  There is a comment in README.Debian, but can we do something better?
 * Do *not* recreate the pfb fonts und upgrade, only on new install!
   (carefull on major version changes!)
-* * lintian warning
-W: cm-super: manpage-has-errors-from-man usr/share/man/man1/t1c2pfb.1.gz /tmp/zmanlAr6Jy:16: warning: can't find numbered character 243
-* fontconfig support
+* defoma hints
+  Check the auto generated hints file, and activate the dh_defomahints call
+  in the rules file
