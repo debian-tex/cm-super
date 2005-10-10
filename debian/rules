@@ -88,7 +88,7 @@ install-stamp-cmsuper: build-stamp
 binary-indep:  build install
 	dh_testdir
 	dh_testroot
-	dh_installdocs FAQ README TODO
+	dh_installdocs FAQ README TODO debian/README.teTeX2
 	dh_installchangelogs ChangeLog
 	dh_installxfonts --package=$(x11package)
 	# the cm-super-x11.defoma-hints file needs some work. Do we really
