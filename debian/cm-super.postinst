@@ -31,10 +31,10 @@ case "$1" in
     	cd /usr/share/texmf/fonts/type1/public/cm-super
 	printf "Generating fonts (this may take some time) ... "
 	if which t1c2pfb > /dev/null 2>&1 ; then
-	    t1c2pfb <cm-super.t1c >/dev/null
+	    t1c2pfb <cm-super.t1c >/dev/null 2>&1
 	else
 	    export PERL_BADLANG=x
-	    perl -x /usr/bin/t1c2pfb.pl <cm-super.t1c >/dev/null
+	    perl -x /usr/bin/t1c2pfb.pl <cm-super.t1c >/dev/null 2>&1
 	fi
 	printf "done\n"
 	update_fontmaps

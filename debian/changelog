@@ -10,6 +10,7 @@ cm-super (0.3.3-2) UNRELEASED; urgency=low
   * Install the afm files also to /usr/share/texmf and only make links
     in /usr/X11R6
   * Install defoma hints file
+  * The package name is cm-super now, so closes: #325093.
 
  -- Norbert Preining <preining@logic.at>  Sat, 15 Oct 2005 19:19:44 +0200
 
