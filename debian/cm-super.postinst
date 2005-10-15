@@ -2,6 +2,28 @@
 # by pts@fazekas.hu at Sun Mar 30 13:08:59 CEST 2003
 # set -e : exit on first error
 
+update_fontmaps()
+{
+    update-updmap --quiet
+    # mktexlsr is recommended now because updmap-sys relies heavily on
+    # Kpathsea to locate updmap.cfg and the map files. Also, it is slightly
+    # better not to specify a particular directory to refresh because
+    # updmap.cfg is typically found in $TEXMFSYSVAR while the map files are in
+    # $TEXMFMAIN.
+    # According to the Debian TeX policy, running mktexlsr and updmap-sys
+    # should work as long as tex-common is configured and these files are
+    # available (general Debian policy wouldn't assure that without this
+    # override from the Debian TeX policy).
+    if which mktexlsr >/dev/null; then mktexlsr; fi
+    if which updmap-sys >/dev/null; then
+        printf "Running updmap-sys... "
+        updmap-sys --quiet
+        echo "done."
+    fi
+
+    return 0
+}
+
 # Extract the .pfb files
 
 case "$1" in
@@ -15,19 +37,11 @@ case "$1" in
 	    perl -x /usr/bin/t1c2pfb.pl <cm-super.t1c >/dev/null
 	fi
 	printf "done\n"
-	mktexlsr
-	update-updmap
-	# if the -sys variant exists (texlive, tetex3) call it, 
-	# otherwise call the original updmap
-	if which updmap-sys > /dev/null 2>&1 ; then
-	    updmap-sys
-	else
-	    updmap
-	fi
+	update_fontmaps
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
-
+	update_fontmaps
     ;;
 
     *)
@@ -35,7 +49,6 @@ case "$1" in
         exit 1
     ;;
 esac
-
 
 
 #DEBHELPER#

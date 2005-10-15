@@ -1,7 +1,7 @@
 Source: cm-super
 Section: tex
 Priority: optional
-Build-Depends-Indep: debhelper (>= 4)
+Build-Depends-Indep: debhelper (>= 4), defoma (>= 0.7.0)
 Maintainer: Norbert Preining <preining@logic.at>
 Standards-Version: 3.6.2.1
 
@@ -9,7 +9,7 @@ Package: cm-super
 Architecture: all
 Replaces: pts-tetex-cm-super
 Conflicts: pts-tetex-cm-super
-Depends: tetex-extra (>= 3) | texlive-basic, tetex-bin (>= 3) |  texlive-basicbin, tex-common
+Depends: tex-common (>= 0.7)
 Suggests: pfb2t1c2pfb
 Description: TeX font package with CM (EC) in Type1 in T1, T2*, TS1, X2 enc
  The CM-Super package contains Type 1 fonts converted from METAFONT
@@ -24,7 +24,7 @@ Description: TeX font package with CM (EC) in Type1 in T1, T2*, TS1, X2 enc
 
 Package: cm-super-x11
 Architecture: all
-Depends: cm-super, xutils (>> 4.0.3)
+Depends: cm-super, defoma (>= 0.5.0), ${misc:Depends}
 Description: Make the cm-super fonts available to X11
  This package makes the cm-super fonts available to X11. This package
  does not contain any fonts itself but allows to reuse the cm-super
