@@ -1,6 +1,4 @@
-#! /bin/bash -e
-# by pts@fazekas.hu at Sun Mar 30 13:08:59 CEST 2003
-# set -e : exit on first error
+#!/bin/sh -e
 
 update_fontmaps()
 {
