@@ -1,6 +1,6 @@
 cm-super (0.3.3-2) unstable; urgency=low
 
-  * list all map files in updmap config file (Closes: #332670)
+  * list all map files in updmap config file as MixedMap (Closes: #332670)
   * depend only on tex-common, making it impossible to install together
     with teTeX2. Add a README.teTeX2 for backporters. (Closes: #332673)
     This also closes the bug that cm-super-t1.map is left over in
@@ -13,8 +13,10 @@ cm-super (0.3.3-2) unstable; urgency=low
     in /usr/X11R6
   * Install defoma hints file
   * The package name is cm-super now, so closes: #325093.
+  * depend on tetex-(base|extra) | texlive-latexrecommended to get the
+    mf sources and tfm files of the fonts.
 
- -- Norbert Preining <preining@logic.at>  Sun, 16 Oct 2005 20:56:49 +0200
+ -- Norbert Preining <preining@logic.at>  Mon, 17 Oct 2005 01:31:00 +0200
 
 cm-super (0.3.3-1) unstable; urgency=low
 
