@@ -47,7 +47,7 @@ install-stamp-cmsuperx11: build-stamp
 	dh_testdir
 	dh_testroot
 	dh_installdirs
-	for i in *1000.pfb *10.pfb ; do \
+	for i in pfb/*1000.pfb pfb/*10.pfb ; do \
 		bn=`basename $$i` ; \
 		echo "usr/share/texmf/fonts/type1/public/cm-super/$$bn usr/X11R6/lib/X11/fonts/Type1/$$bn" >> debian/$(x11package).links ; \
 	done
