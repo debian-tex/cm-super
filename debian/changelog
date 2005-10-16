@@ -1,8 +1,10 @@
-cm-super (0.3.3-2) UNRELEASED; urgency=low
+cm-super (0.3.3-2) unstable; urgency=low
 
   * list all map files in updmap config file (Closes: #332670)
   * depend only on tex-common, making it impossible to install together
     with teTeX2. Add a README.teTeX2 for backporters. (Closes: #332673)
+    This also closes the bug that cm-super-t1.map is left over in
+    the updmap.cfg file (Closes: #334177)
   * make font generation less noisy, only mention that it may take
     some time. (Closes: #333745)
   * include the postrm/postinst scripts from lmodern, which are prototypes
@@ -12,7 +14,7 @@ cm-super (0.3.3-2) UNRELEASED; urgency=low
   * Install defoma hints file
   * The package name is cm-super now, so closes: #325093.
 
- -- Norbert Preining <preining@logic.at>  Sat, 15 Oct 2005 19:19:44 +0200
+ -- Norbert Preining <preining@logic.at>  Sun, 16 Oct 2005 20:56:49 +0200
 
 cm-super (0.3.3-1) unstable; urgency=low
 
