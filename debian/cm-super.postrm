@@ -66,7 +66,6 @@ try_to_update_fontmaps()
 
 case "$1" in
     remove|disappear)
-        rm -rf /usr/share/texmf/fonts/type1/public/cm-super/
         try_to_update_fontmaps
     ;;
 
