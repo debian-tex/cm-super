@@ -81,6 +81,7 @@ clean: debian/control
 	-rm -f t1c2pfb pfb2t1c
 	-rm -f cm-super.t1c
 	rm -f $(EPERL_FILES) 
+	-$(MAKE) -f debian/rules debian/control
 
 eperl-stamp: $(EPERL_FILES)
 	touch $@
@@ -142,7 +143,7 @@ install-stamp-cmsuper: build-stamp
 binary-indep:  build install
 	dh_testdir
 	dh_testroot
-	dh_installdocs FAQ README TODO debian/README.teTeX2
+	dh_installdocs FAQ README TODO <:=$READMEsarge:>
 	dh_installchangelogs ChangeLog
 	dh_link
 	dh_installxfonts --package=$(x11package)

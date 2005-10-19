@@ -23,11 +23,13 @@ else {
   $ENCLOCATION="usr/share/texmf/dvips/cm-super";
   $SYSEXTENSION="";
   $DEPPACKAGE="tetex-base";
-  $DEPENDS="tetex-base (< 3), tetex-extra (< 3), tetex-bin (< 3)";
+  $DEPENDS="tetex-base (<< 3), tetex-extra (<< 3), tetex-bin (<< 3)";
+  $READMEsarge="debian/sarge/README.sarge";
 } else {
   $MAPLOCATION="etc/texmf/map/dvips/cm-super";
   $ENCLOCATION="usr/share/texmf/fonts/enc/dvips/cm-super";
   $SYSEXTENSION="-sys";
   $DEPPACKAGE="tex-common";
   $DEPENDS="tex-common, tetex-base (>= 3) | texlive-latexrecommended, tetex-extra (>= 3) | texlive-latexrecommended";
+  $READMEsarge="";
 }:>//
