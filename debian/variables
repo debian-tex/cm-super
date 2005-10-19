@@ -1,0 +1,33 @@
+<:# Copyright (C) 2004 by Frank Küster <frank@kuesterei.ch>.:>//
+<:# Copyright (C) 2005 by Norbert Preining <preining@logic.at>.:>//
+<:# $Id$:>//
+<:use File::Basename:>//
+<:$PACKAGE="cm-super":>//
+<:$DISTRIBUTION="sid":>//
+<:# get the package version - must be usable in subdirectories, too:>//)
+<:if(-f "changelog"){open(CHANGELOG,"changelog")} else {open(CHANGELOG, "../changelog")};
+# get the version even if the first line is blank
+while($VERSION=<CHANGELOG>){last if('' ne $VERSION=~s/$PACKAGE \((.*)\).*\n/$1/)}:>//
+<:# compute the corresponding version for a sarge backport:>//
+<:if ( ($rev=$VERSION)=~ s/.*-([[:digit:]]*).*/$1/, $rev == 0)
+  # if the debian revision is 0 or 0.x, don't make a backport
+  {$SARGEVERSION = ''}
+else {
+  # currently, we only need to recompile: binary-only-NMU version number
+  # $sarge_rev=$rev-1;
+  # ($SARGEVERSION=$VERSION)=~s/(.*-)$rev(.*)/$1$sarge_rev.sarge$2/;
+  ($SARGEVERSION=$VERSION)=~s/(.*-)$rev(.*)/$1$rev.0.sarge1/;
+}:>//
+<:if ( -r "sarge/changelog.sid" ) { 
+  $MAPLOCATION="usr/share/texmf/dvips/cm-super";
+  $ENCLOCATION="usr/share/texmf/dvips/cm-super";
+  $SYSEXTENSION="";
+  $DEPPACKAGE="tetex-base";
+  $DEPENDS="tetex-base (< 3), tetex-extra (< 3), tetex-bin (< 3)";
+} else {
+  $MAPLOCATION="etc/texmf/map/dvips/cm-super";
+  $ENCLOCATION="usr/share/texmf/fonts/enc/dvips/cm-super";
+  $SYSEXTENSION="-sys";
+  $DEPPACKAGE="tex-common";
+  $DEPENDS="tex-common, tetex-base (>= 3) | texlive-latexrecommended, tetex-extra (>= 3) | texlive-latexrecommended";
+}:>//

@@ -1,3 +1,4 @@
+#include variables
 #!/bin/sh -e
 
 update_fontmaps()
@@ -13,9 +14,9 @@ update_fontmaps()
     # available (general Debian policy wouldn't assure that without this
     # override from the Debian TeX policy).
     if which mktexlsr >/dev/null; then mktexlsr; fi
-    if which updmap-sys >/dev/null; then
-        printf "Running updmap-sys... "
-        updmap-sys --quiet
+    if which updmap<:=$SYSEXTENSION:> >/dev/null; then
+        printf "Running updmap<:=$SYSEXTENSION:> ... "
+        updmap<:=$SYSEXTENSION:> --quiet
         echo "done."
     fi
 

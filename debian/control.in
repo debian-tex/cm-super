@@ -1,7 +1,8 @@
+#include variables
 Source: cm-super
 Section: tex
 Priority: optional
-Build-Depends-Indep: debhelper (>= 4), defoma (>= 0.7.0)
+Build-Depends-Indep: debhelper (>= 4), defoma (>= 0.7.0), eperl
 Maintainer: Norbert Preining <preining@logic.at>
 Standards-Version: 3.6.2.1
 
@@ -9,7 +10,7 @@ Package: cm-super
 Architecture: all
 Replaces: pts-tetex-cm-super
 Conflicts: pts-tetex-cm-super
-Depends: tex-common, tetex-base (>= 3) | texlive-latexrecommended, tetex-extra (>= 3) | texlive-latexrecommended
+Depends: <:=$DEPENDS:>
 Suggests: pfb2t1c2pfb
 Description: TeX font package with CM (EC) in Type1 in T1, T2*, TS1, X2 enc
  The CM-Super package contains Type 1 fonts converted from METAFONT

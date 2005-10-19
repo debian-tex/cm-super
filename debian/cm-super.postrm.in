@@ -1,3 +1,4 @@
+#include variables
 #!/bin/sh -e
 
 tell_that_errors_are_ok()
@@ -16,7 +17,7 @@ tell_that_errors_are_ok()
     # available (general Debian policy wouldn't assure that without this
     # override from the Debian TeX policy).
     printf "\
-Trying to run '$prog' (error messages can be ignored if tex-common
+Trying to run '$prog' (error messages can be ignored if <:=$DEPPACKAGE:>
 is not configured)...$endwith"
 
     return 0
@@ -55,9 +56,9 @@ try_to_update_fontmaps()
         echo "done."
     fi
 
-    if which updmap-sys >/dev/null; then
-        tell_that_errors_are_ok -n updmap-sys
-        updmap-sys --quiet || true
+    if which updmap<:=$SYSEXTENSION:> >/dev/null; then
+        tell_that_errors_are_ok -n updmap<:=SYSEXTENSION:>
+        updmap<:=$SYSEXTENSION:> --quiet || true
         echo "done."
     fi
 
