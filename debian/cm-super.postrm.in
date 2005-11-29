@@ -25,7 +25,6 @@ check_run_without_errors ()
 }
 
 
-<:=$SYSEXTENSION:>
 case "$1" in
     remove|disappear)
 	check_run_without_errors update-updmap
