@@ -1,7 +1,7 @@
 usr/share/texmf/fonts/type1/public/cm-super
-usr/share/texmf/fonts/enc/dvips/cm-super
-usr/share/texmf/fonts/map/dvips/cm-super
-usr/share/texmf/dvips/config
+etc/texmf/fonts/enc/dvips/cm-super
+etc/texmf/fonts/map/dvips/cm-super
+etc/texmf/dvips/config
 usr/share/texmf/tex/latex/cm-super
 usr/share/man/man1
 usr/share/lintian/overrides

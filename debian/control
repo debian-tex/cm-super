@@ -10,7 +10,7 @@ Package: cm-super
 Architecture: all
 Replaces: pts-tetex-cm-super
 Conflicts: pts-tetex-cm-super
-Depends: tex-common, tetex-base (>= 3) | texlive-latex-recommended, tetex-extra (>= 3) | texlive-latex-recommended, pfb2t1c2pfb
+Depends: tex-common (>= 0.11), tetex-base (>= 3) | texlive-latex-recommended, tetex-extra (>= 3) | texlive-latex-recommended, pfb2t1c2pfb
 Description: TeX font package with CM (EC) in Type1 in T1, T2*, TS1, X2 enc
  The CM-Super package contains Type 1 fonts converted from METAFONT
  fonts and covers entire EC/TC, EC Concrete, EC Bright and LH fonts

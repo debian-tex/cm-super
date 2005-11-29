@@ -1,0 +1,61 @@
+#!/bin/sh -e
+
+#
+# we have to move the map and dvips config file into /u/s/texmf
+# but want to preserve changes done by the user!
+#
+config_move ()
+{
+    oldfile=$1
+    oldmd5sum=$2
+    newloc=$3
+
+    if ! [ -r $oldfile ] ; then
+        return 0
+    fi
+    oldloc=`dirname $1`
+    newmd5sum=`md5sum $oldfile |  cut -d ' ' -f 1`
+    if [ "$newmd5sum" = "$oldmd5sum" ] ; then
+	echo "Removing obsolete, unchanged conffile $oldfile"
+	rm $oldfile
+    else
+    	if [ "X$newloc" = "X" ] ; then
+	    echo "Conffile $oldfile was changed, leaving it at the same place"
+	else
+	    echo "Conffile $oldfile was changed, moving it to new location $newloc"
+	    mkdir -p $newloc
+	    mv $oldfile $newloc
+	fi
+    fi
+    test -d $oldloc && rmdir --ignore-fail-on-non-empty $oldloc || true
+}
+
+   
+
+# Extract the .pfb files
+
+case "$1" in
+    upgrade|install)
+	set -e
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-t1.map aedad51b5745237d8633f7821d0c0f6f /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2a.map befe816fca42bc17eaebff2e333e8419 /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2b.map 71bb8b3c2c2f06291bd909d35720a4ef /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2c.map e354279fce7c20c4a7548acc66c12ab4 /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-ts1.map 8a4109fa788750cf5785a22d2fa1fc2d /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-x2.map 2898acd646cc873bbf6ff7c2996f4e7c /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/dvips/config.cm-super 859c1e0b535d8dc0b966c3ad1da21445
+    ;;
+
+    abort-upgrade)
+    ;;
+
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+
+#DEBHELPER#
+
+exit 0
