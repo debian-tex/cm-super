@@ -1,10 +1,11 @@
-cm-super (0.3.3-3) unstable; urgency=low
+cm-super (0.3.3-2.1) UNRELEASED; urgency=low
 
   * change texlive dependencies after name change of packages
   * adapted maintainer scripts to be more silent
   * depend on pfb2t1c2pfb, remove the perl version
+  * add code for config file move
 
- -- Norbert Preining <preining@logic.at>  Tue, 29 Nov 2005 19:02:31 +0100
+ -- Norbert Preining <preining@logic.at>  Tue, 29 Nov 2005 19:59:04 +0100
 
 cm-super (0.3.3-2) unstable; urgency=low
 
