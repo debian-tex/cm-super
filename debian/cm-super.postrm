@@ -19,6 +19,8 @@ check_run_without_errors ()
           echo
         fi
         set -e
+    else
+        rm -f $tempfile
     fi
     return 0
 }
