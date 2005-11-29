@@ -1,4 +1,3 @@
-#include variables
 #!/bin/sh -e
 
 check_run_without_errors ()
@@ -29,7 +28,7 @@ case "$1" in
     remove|disappear)
 	check_run_without_errors update-updmap
 	check_run_without_errors mktexlsr /usr/share/texmf
-	check_run_without_errors updmap<:=$SYSEXTENSION:>
+	check_run_without_errors updmap-sys
     ;;
 
     purge|upgrade|failed-upgrade|abort-upgrade|abort-install)

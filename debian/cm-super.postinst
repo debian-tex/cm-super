@@ -1,16 +1,15 @@
-#include variables
 #!/bin/sh -e
 
 create_fontmaps ()
 {
     tempfile=`mktemp -p /tmp cm-super.updmap.XXXXXXXX`
-    echo -n "Running updmap<:=$SYSEXTENSION:>. This may take some time. ..."
-    if updmap<:=$SYSEXTENSION:> > $tempfile 2>&1 ; then
+    echo -n "Running updmap-sys. This may take some time. ..."
+    if updmap-sys > $tempfile 2>&1 ; then
       rm -f $tempfile
       echo " done."
     else
       echo
-      echo "updmap<:=$SYSEXTENSION:> failed. Output has been stored in"
+      echo "updmap-sys failed. Output has been stored in"
       echo "$tempfile"
       echo "Please include this file if you report a bug."
       echo
