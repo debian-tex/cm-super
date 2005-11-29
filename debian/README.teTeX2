@@ -6,8 +6,12 @@ and in teTeX 2 the encoding files are currently not found.
 
 If you want to backport this package to teTeX 2, please either link or 
 move the encoding files
-       FROM /usr/share/texmf/fonts/enc/dvips/cm-super/
-       TO   /usr/share/texmf/dvips/cm-super/
+	FROM	/etc/texmf/fonts/enc/dvips/cm-super/
+	TO	/etc/texmf/dvips/cm-super/
+and the map files
+	FROM	/etc/texmf/fonts/map/dvips/cm-super/
+	TO	/etc/texmf/dvips/cm-super/
+Later on these files will move to TEXMFMAIN=/usr/share/texmf.
 
 Better would be to use the backport of teTeX3 together with a straight
 forward backport of this package.

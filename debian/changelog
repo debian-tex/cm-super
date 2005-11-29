@@ -1,4 +1,4 @@
-cm-super (0.3.3-2.1) UNRELEASED; urgency=low
+cm-super (0.3.3-3) unstable; urgency=low
 
   * change texlive dependencies after name change of packages
   * adapted maintainer scripts to be more silent
@@ -8,7 +8,7 @@ cm-super (0.3.3-2.1) UNRELEASED; urgency=low
     we will move the map files also to TEXMFMAIN.
   * depend on tex-common >= 0.11 to get /etc/texmf as TEXMFSYSCONFIG
 
- -- Norbert Preining <preining@logic.at>  Wed, 30 Nov 2005 00:04:58 +0100
+ -- Norbert Preining <preining@logic.at>  Wed, 30 Nov 2005 00:26:58 +0100
 
 cm-super (0.3.3-2) unstable; urgency=low
 

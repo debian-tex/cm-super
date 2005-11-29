@@ -6,11 +6,5 @@ TODO for debian cm-super package:
   (carefull on major version changes!)
 * check whether dependencies are correct for texlive on tfm/mf files, and
   should we recommend / suggest texlive-langcyrillic?
-* map files move must be checked!
-	/etc/texmf/map/dvips/cm-super/cm-super-t1.map
-	/etc/texmf/map/dvips/cm-super/cm-super-t2a.map
-	/etc/texmf/map/dvips/cm-super/cm-super-t2b.map
-	/etc/texmf/map/dvips/cm-super/cm-super-t2c.map
-	/etc/texmf/map/dvips/cm-super/cm-super-ts1.map
-	/etc/texmf/map/dvips/cm-super/cm-super-x2.map
-	/etc/texmf/dvips/config.cm-super
+* when tetex has moved /etc/texmf/map to /u/s/texmf/fonts/map, we shold move
+  the map files from /etc/texmf/fonts/map/dvips/cm-super to TEXMAIN, too.
