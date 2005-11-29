@@ -44,6 +44,9 @@ config_move ()
     oldmd5sum=$2
     newloc=$3
 
+    if ! [ -r $oldfile ] ; then
+        return 0
+    fi
     oldloc=`dirname $1`
     newmd5sum=`md5sum $oldfile |  cut -d ' ' -f 1`
     if [ "$newmd5sum" = "$oldmd5sum" ] ; then
