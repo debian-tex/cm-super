@@ -88,9 +88,6 @@ install-stamp-cmsuper: build-stamp
 	done
 	ln $(CMT) $(CMD)
 # ^^^ ln occupies less space on disk than cp_r
-	cp debian/t1c2pfb.pl debian/$(package)/usr/bin/t1c2pfb.pl
-	cp debian/t1c2pfb.man debian/$(package)/usr/share/man/man1/t1c2pfb.pl.1
-	chmod 755 debian/$(package)/usr/bin/t1c2pfb.pl
 	chown 0.0 $(CMT)
 	cp type1ec.sty debian/$(package)/usr/share/texmf/tex/latex/cm-super
 	#

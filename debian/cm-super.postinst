@@ -34,20 +34,36 @@ update_lsr_files ()
     fi
 }
 
+check_run_without_errors ()
+{
+    tempfile=`mktemp -p /tmp cm-super.checkrun.XXXXXXXX`
+    if which $1  >/dev/null; then
+        echo -n "Running $*. This may take some time. ..."
+        set +e
+        $* > $tempfile 2>&1
+        if [ $? = 0 ] ; then
+          rm -f $tempfile
+          echo " done."
+        else
+          echo
+          echo "$* failed. Output has been stored in"
+          echo "$tempfile"
+          echo "Please include this file if you report a bug."
+          echo
+        fi
+        set -e
+    fi
+    return 0
+}
+
+
 
 # Extract the .pfb files
 
 case "$1" in
     configure)
     	cd /usr/share/texmf/fonts/type1/public/cm-super
-	echo -n "Generating fonts. This may take some time. ..."
-	if which t1c2pfb > /dev/null 2>&1 ; then
-	    t1c2pfb <cm-super.t1c >/dev/null 2>&1
-	else
-	    export PERL_BADLANG=x
-	    perl -x /usr/bin/t1c2pfb.pl <cm-super.t1c >/dev/null 2>&1
-	fi
-	echo " done."
+	check_run_without_errors "t1c2pfb <cm-super.t1c"
 	update-updmap
 	update_lsr_files
 	create_fontmaps
