@@ -30,6 +30,6 @@ else {
   $ENCLOCATION="usr/share/texmf/fonts/enc/dvips/cm-super";
   $SYSEXTENSION="-sys";
   $DEPPACKAGE="tex-common";
-  $DEPENDS="tex-common, tetex-base (>= 3) | texlive-latexrecommended, tetex-extra (>= 3) | texlive-latexrecommended";
+  $DEPENDS="tex-common, tetex-base (>= 3) | texlive-latex-recommended, tetex-extra (>= 3) | texlive-latex-recommended";
   $READMEsarge="";
 }:>//
