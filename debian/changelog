@@ -2,6 +2,7 @@ cm-super (0.3.3-3) unstable; urgency=low
 
   * switched to eperl for backporting cm-super to sarge
   * change texlive dependencies after name change of packages
+  * adapted maintainer scripts to be more silent
 
  -- Norbert Preining <preining@logic.at>  Tue, 29 Nov 2005 17:15:34 +0100
 

@@ -1,46 +1,63 @@
 #include variables
 #!/bin/sh -e
 
-update_fontmaps()
+create_fontmaps ()
 {
-    update-updmap --quiet
-    # mktexlsr is recommended now because updmap-sys relies heavily on
-    # Kpathsea to locate updmap.cfg and the map files. Also, it is slightly
-    # better not to specify a particular directory to refresh because
-    # updmap.cfg is typically found in $TEXMFSYSVAR while the map files are in
-    # $TEXMFMAIN.
-    # According to the Debian TeX policy, running mktexlsr and updmap-sys
-    # should work as long as tex-common is configured and these files are
-    # available (general Debian policy wouldn't assure that without this
-    # override from the Debian TeX policy).
-    if which mktexlsr >/dev/null; then mktexlsr; fi
-    if which updmap<:=$SYSEXTENSION:> >/dev/null; then
-        printf "Running updmap<:=$SYSEXTENSION:> ... "
-        updmap<:=$SYSEXTENSION:> --quiet
-        echo "done."
+    tempfile=`mktemp -p /tmp cm-super.updmap.XXXXXXXX`
+    echo -n "Running updmap<:=$SYSEXTENSION:>. This may take some time. ..."
+    if updmap<:=$SYSEXTENSION:> > $tempfile 2>&1 ; then
+      rm -f $tempfile
+      echo " done."
+    else
+      echo
+      echo "updmap<:=$SYSEXTENSION:> failed. Output has been stored in"
+      echo "$tempfile"
+      echo "Please include this file if you report a bug."
+      echo
+      exit 1
     fi
-
-    return 0
 }
+
+update_lsr_files ()
+{
+    tempfile=`mktemp -p /tmp cm-super.mktexlsr.XXXXXXXX`
+    echo -n "Running mktexlsr. This may take some time. ..."
+    if mktexlsr /usr/share/texmf > $tempfile 2>&1 ; then
+         rm -f $tempfile
+         echo " done."
+    else
+         echo
+         echo "mktexlsr failed. Output has been stored in"
+         echo "$tempfile"
+         echo "Please include this file if you report a bug."
+         echo
+         exit 1
+    fi
+}
+
 
 # Extract the .pfb files
 
 case "$1" in
     configure)
     	cd /usr/share/texmf/fonts/type1/public/cm-super
-	printf "Generating fonts (this may take some time) ... "
+	echo -n "Generating fonts. This may take some time. ..."
 	if which t1c2pfb > /dev/null 2>&1 ; then
 	    t1c2pfb <cm-super.t1c >/dev/null 2>&1
 	else
 	    export PERL_BADLANG=x
 	    perl -x /usr/bin/t1c2pfb.pl <cm-super.t1c >/dev/null 2>&1
 	fi
-	printf "done\n"
-	update_fontmaps
+	echo " done."
+	update-updmap
+	update_lsr_files
+	create_fontmaps
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
-	update_fontmaps
+	update-updmap
+	update_lsr_files
+	create_fontmaps
     ;;
 
     *)

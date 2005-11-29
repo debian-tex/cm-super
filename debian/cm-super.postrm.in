@@ -1,84 +1,39 @@
 #include variables
 #!/bin/sh -e
 
-tell_that_errors_are_ok()
+check_run_without_errors ()
 {
-    # Cheap option handling...
-    if [ "$1" = -n ]; then
-        prog="$2"
-        endwith=' '
-    else
-        prog="$1"
-        endwith='\n'
+    tempfile=`mktemp -p /tmp cm-super.checkrun.XXXXXXXX`
+    if which $1  >/dev/null; then
+        echo -n "Running $*. This may take some time. ..."
+        set +e
+        $* > $tempfile 2>&1
+        if [ $? = 0 ] ; then
+          rm -f $tempfile
+          echo " done."
+        else
+          echo
+          echo "$* failed. Output has been stored in"
+          echo "$tempfile"
+          echo "If tex-common is not configured you can ignore this error message!"
+          echo "Otherwise please include this file if you report a bug."
+          echo
+        fi
+        set -e
     fi
-
-    # According to the Debian TeX policy, running mktexlsr and updmap-sys
-    # should work as long as tex-common is configured and these files are
-    # available (general Debian policy wouldn't assure that without this
-    # override from the Debian TeX policy).
-    printf "\
-Trying to run '$prog' (error messages can be ignored if <:=$DEPPACKAGE:>
-is not configured)...$endwith"
-
     return 0
 }
 
-# The function name is *try_to*_update_fontmaps because the following
-# scenario might happen:
-#    1. this package is deconfigured
-#    2. tex-common and tetex-bin are removed
-#    3. this package is removed or purged
-#
-# (cf. Policy § 6.5, step 2, about a conflicting package being removed due
-# to the installation of the package being discussed).
-#
-# In this case, update-updmap, mktexlsr and updmap-sys would all be gone once
-# tex-common and tetex-bin are removed, so we must append "|| true" to their
-# calls.
-try_to_update_fontmaps()
-{
-    # Don't print alarming error messages if the programs aren't even
-    # available.
-    if which update-updmap >/dev/null; then
-        tell_that_errors_are_ok -n update-updmap
-        update-updmap --quiet || true
-        echo "done."
-    fi
 
-    # mktexlsr is recommended now because updmap-sys relies heavily on
-    # Kpathsea to locate updmap.cfg and the map files. Also, it is slightly
-    # better not to specify a particular directory to refresh because
-    # updmap.cfg is typically found in $TEXMFSYSVAR while the map files are in
-    # $TEXMFMAIN.
-    if which mktexlsr >/dev/null; then
-        tell_that_errors_are_ok mktexlsr
-        mktexlsr || true
-        echo "done."
-    fi
-
-    if which updmap<:=$SYSEXTENSION:> >/dev/null; then
-        tell_that_errors_are_ok -n updmap<:=SYSEXTENSION:>
-        updmap<:=$SYSEXTENSION:> --quiet || true
-        echo "done."
-    fi
-
-    return 0
-}
-
+<:=$SYSEXTENSION:>
 case "$1" in
     remove|disappear)
-        try_to_update_fontmaps
+	check_run_without_errors update-updmap
+	check_run_without_errors mktexlsr /usr/share/texmf
+	check_run_without_errors updmap<:=$SYSEXTENSION:>
     ;;
 
-    purge)
-        # Supposing updmap.cfg & Co are clean (which I think is a reasonable
-        # assumption), we don't need to call try_to_update_fontmaps().
-        # Calling it on remove _and_ on purge just for hypothetical users
-        # who would break their config before purging this package seems to
-        # be more annoying than useful (it takes a lot of time).
-    ;;
-
-    upgrade|failed-upgrade|abort-upgrade|abort-install)
+    purge|upgrade|failed-upgrade|abort-upgrade|abort-install)
     ;;
 
     *)
