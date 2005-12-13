@@ -4,11 +4,15 @@
 # we have to move the map and dvips config file into /u/s/texmf
 # but want to preserve changes done by the user!
 #
+dpkg_md5sum(){
+  grep "$1[[:space:]]"  /var/lib/dpkg/status | cut -f 3 -d ' '
+}
+
 config_move ()
 {
     oldfile=$1
-    oldmd5sum=$2
-    newloc=$3
+    newloc=$2
+    oldmd5sum=`dpkg_md5sum $oldfile`
 
     if ! [ -r $oldfile ] ; then
         return 0
@@ -37,13 +41,13 @@ config_move ()
 case "$1" in
     upgrade|install)
 	set -e
-	config_move /etc/texmf/map/dvips/cm-super/cm-super-t1.map aedad51b5745237d8633f7821d0c0f6f /etc/texmf/fonts/map/dvips/cm-super/
-	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2a.map befe816fca42bc17eaebff2e333e8419 /etc/texmf/fonts/map/dvips/cm-super/
-	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2b.map 71bb8b3c2c2f06291bd909d35720a4ef /etc/texmf/fonts/map/dvips/cm-super/
-	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2c.map e354279fce7c20c4a7548acc66c12ab4 /etc/texmf/fonts/map/dvips/cm-super/
-	config_move /etc/texmf/map/dvips/cm-super/cm-super-ts1.map 8a4109fa788750cf5785a22d2fa1fc2d /etc/texmf/fonts/map/dvips/cm-super/
-	config_move /etc/texmf/map/dvips/cm-super/cm-super-x2.map 2898acd646cc873bbf6ff7c2996f4e7c /etc/texmf/fonts/map/dvips/cm-super/
-	config_move /etc/texmf/dvips/config.cm-super 859c1e0b535d8dc0b966c3ad1da21445
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-t1.map /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2a.map /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2b.map /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-t2c.map /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-ts1.map /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/map/dvips/cm-super/cm-super-x2.map /etc/texmf/fonts/map/dvips/cm-super/
+	config_move /etc/texmf/dvips/config.cm-super
     ;;
 
     abort-upgrade)

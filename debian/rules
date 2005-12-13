@@ -17,8 +17,9 @@ SHELL = /bin/bash
 CMD=debian/$(package)/usr/share/texmf/fonts/type1/public/cm-super/cm-super.t1c
 CMT=cm-super.t1c
 
-MAPLOCATION=etc/texmf/fonts/map/dvips/cm-super
-ENCLOCATION=etc/texmf/fonts/enc/dvips/cm-super
+MAPLOCATION=usr/share/texmf/fonts/map/dvips/cm-super
+ENCLOCATION=usr/share/texmf/fonts/enc/dvips/cm-super
+CONFIGLOCATION=usr/share/texmf/dvips/config
 
 ####################
 #
@@ -91,11 +92,10 @@ install-stamp-cmsuper: build-stamp
 	chown 0.0 $(CMT)
 	cp type1ec.sty debian/$(package)/usr/share/texmf/tex/latex/cm-super
 	#
-	# these two locations must be fixed for sarge
-	#
 	cp dvips/*.map debian/$(package)/$(MAPLOCATION)/
 	cp dvips/*.enc debian/$(package)/$(ENCLOCATION)/
-	cp dvips/config.cm-super debian/$(package)/etc/texmf/dvips/config
+	cp dvips/config.cm-super debian/$(package)/$(CONFIGLOCATION)/
+
 	cp debian/updmap-config.cfg debian/$(package)/etc/texmf/updmap.d/50$(package).cfg
 	echo "50$(package)" > debian/$(package)/var/lib/tex-common/fontmap-cfg/$(package).list
 	# install the override file for lintian
