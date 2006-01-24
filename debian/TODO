@@ -6,3 +6,4 @@ TODO for debian cm-super package:
   (carefull on major version changes!)
 * check whether dependencies are correct for texlive on tfm/mf files, and
   should we recommend / suggest texlive-langcyrillic?
+* use dh_installtex with next version of tex-common
