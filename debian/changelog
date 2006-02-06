@@ -86,4 +86,6 @@ pts-tetex-cm-super (0.3.3-1) unstable; urgency=low
 
 Local variables:
 mode: debian-changelog
+coding: utf-8
 End:
+# vim:set termencoding=iso8859-15 encoding=utf-8 fileencoding=utf-8: #
