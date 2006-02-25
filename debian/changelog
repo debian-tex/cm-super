@@ -1,8 +1,8 @@
 cm-super (0.3.3-4) UNRELEASED; urgency=low
 
-  * NOT RELEASED YET
+  * Switch to dh_installtex usage, adapt the control file.
 
- -- Norbert Preining <preining@logic.at>  Tue, 13 Dec 2005 21:24:47 +0100
+ -- Norbert Preining <preining@logic.at>  Sat, 25 Feb 2006 17:44:03 +0100
 
 cm-super (0.3.3-3) unstable; urgency=low
 

@@ -2,7 +2,8 @@
 Source: cm-super
 Section: tex
 Priority: optional
-Build-Depends-Indep: pfb2t1c2pfb,  debhelper (>= 4), defoma (>= 0.7.0)
+Build-Depends: debhelper (>= 5)
+Build-Depends-Indep: pfb2t1c2pfb, defoma (>= 0.7.0), tex-common (>= 0.18)
 Maintainer: Norbert Preining <preining@logic.at>
 Standards-Version: 3.6.2.1
 

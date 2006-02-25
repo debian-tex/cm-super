@@ -96,8 +96,16 @@ install-stamp-cmsuper: build-stamp
 	cp dvips/*.enc debian/$(package)/$(ENCLOCATION)/
 	cp dvips/config.cm-super debian/$(package)/$(CONFIGLOCATION)/
 
-	cp debian/updmap-config.cfg debian/$(package)/etc/texmf/updmap.d/50$(package).cfg
-	echo "50$(package)" > debian/$(package)/var/lib/tex-common/fontmap-cfg/$(package).list
+	# use dh_installtex instead of manual installation
+	#cp debian/updmap-config.cfg debian/$(package)/etc/texmf/updmap.d/50$(package).cfg
+	#echo "50$(package)" > debian/$(package)/var/lib/tex-common/fontmap-cfg/$(package).list
+	dh_installtex --priority=50 map=MixedMap,cm-super-t1.map	\
+				    map=MixedMap,cm-super-t2a.map	\
+				    map=MixedMap,cm-super-t2b.map	\
+				    map=MixedMap,cm-super-t2c.map	\
+				    map=MixedMap,cm-super-ts1.map	\
+				    map=MixedMap,cm-super-x2.map
+
 	# install the override file for lintian
 	cp debian/$(package).override debian/$(package)/usr/share/lintian/overrides/$(package)
 	touch install-stamp-cmsuper
