@@ -1,8 +1,10 @@
 cm-super (0.3.3-4) UNRELEASED; urgency=low
 
   * Switch to dh_installtex usage, adapt the control file.
+  * Add encoding entries for microsoft-cp1251 and iso8859-5
+    (Closes: #332672)
 
- -- Norbert Preining <preining@logic.at>  Sat, 25 Feb 2006 17:44:03 +0100
+ -- Norbert Preining <preining@logic.at>  Sat, 25 Feb 2006 18:14:23 +0100
 
 cm-super (0.3.3-3) unstable; urgency=low
 
