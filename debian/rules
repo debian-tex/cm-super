@@ -67,15 +67,13 @@ install-stamp-cmsuperx11: build-stamp
 	dh_installdirs
 	for i in pfb/*1000.pfb pfb/*10.pfb ; do \
 		bn=`basename $$i` ; \
-		echo "usr/share/texmf/fonts/type1/public/cm-super/$$bn usr/X11R6/lib/X11/fonts/Type1/$$bn" >> debian/$(x11package).links ; \
+		echo "usr/share/texmf/fonts/type1/public/cm-super/$$bn usr/share/fonts/X11/Type1/$$bn" >> debian/$(x11package).links ; \
 	done
 	for i in afm/*1000.afm.gz afm/*10.afm.gz ; do \
 		bn=`basename $$i .gz` ; \
 		gunzip -c $$i > debian/$(x11package)/usr/share/texmf/fonts/afm/public/cm-super/$$bn ; \
-		echo "usr/share/texmf/fonts/afm/public/cm-super/$$bn usr/X11R6/lib/X11/fonts/Type1/$$bn" >> debian/$(x11package).links ; \
+		echo "usr/share/texmf/fonts/afm/public/cm-super/$$bn usr/share/fonts/X11/Type1/$$bn" >> debian/$(x11package).links ; \
 	done
-	# install the override file for lintian
-	cp debian/$(x11package).override debian/$(x11package)/usr/share/lintian/overrides/$(x11package)
 	cp debian/fonts.scale debian/$(x11package)/etc/X11/fonts/Type1/cm-super-x11.scale
 	touch install-stamp-cmsuperx11
 

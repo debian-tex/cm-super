@@ -1,5 +1,5 @@
 category type1
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbbx10.pfb
+begin /usr/share/fonts/X11/Type1/sfbbx10.pfb
   FontName = SFBBX10
   Charset = ISO8859-1
   Family = Computer_Modern_Bright
@@ -8,9 +8,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbbx10.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbbx10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbbx10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbi1000.pfb
+begin /usr/share/fonts/X11/Type1/sfbi1000.pfb
   FontName = SFBI1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -19,9 +19,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbi1000.pfb
   Width = Variable
   Shape = Normal Italic
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbi1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbi1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbl1000.pfb
+begin /usr/share/fonts/X11/Type1/sfbl1000.pfb
   FontName = SFBL1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -30,9 +30,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbl1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbl1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbl1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbm1000.pfb
+begin /usr/share/fonts/X11/Type1/sfbm1000.pfb
   FontName = SFBM1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -41,9 +41,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbm1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbm1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbm1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbmo10.pfb
+begin /usr/share/fonts/X11/Type1/sfbmo10.pfb
   FontName = SFBMO10
   Charset = ISO8859-1
   Family = Computer_Modern_Bright
@@ -52,9 +52,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbmo10.pfb
   Width = Variable
   Shape = Normal Oblique
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbmo10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbmo10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbmr10.pfb
+begin /usr/share/fonts/X11/Type1/sfbmr10.pfb
   FontName = SFBMR10
   Charset = ISO8859-1
   Family = Computer_Modern_Bright
@@ -63,9 +63,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbmr10.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbmr10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbmr10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbso10.pfb
+begin /usr/share/fonts/X11/Type1/sfbso10.pfb
   FontName = SFBSO10
   Charset = ISO8859-1
   Family = Computer_Modern_Bright
@@ -74,9 +74,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbso10.pfb
   Width = Variable
   Shape = Normal Oblique
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbso10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbso10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbsr10.pfb
+begin /usr/share/fonts/X11/Type1/sfbsr10.pfb
   FontName = SFBSR10
   Charset = ISO8859-1
   Family = Computer_Modern_Bright
@@ -85,9 +85,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbsr10.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbsr10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbsr10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbtl10.pfb
+begin /usr/share/fonts/X11/Type1/sfbtl10.pfb
   FontName = SFBTL10
   Charset = ISO8859-1
   Family = Computer_Modern_Bright
@@ -96,9 +96,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbtl10.pfb
   Width = Fixed
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbtl10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbtl10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbto10.pfb
+begin /usr/share/fonts/X11/Type1/sfbto10.pfb
   FontName = SFBTO10
   Charset = ISO8859-1
   Family = Computer_Modern_Bright
@@ -107,9 +107,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbto10.pfb
   Width = Fixed
   Shape = Normal Oblique
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbto10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbto10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfbx1000.pfb
+begin /usr/share/fonts/X11/Type1/sfbx1000.pfb
   FontName = SFBX1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -118,9 +118,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfbx1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfbx1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfbx1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfcc1000.pfb
+begin /usr/share/fonts/X11/Type1/sfcc1000.pfb
   FontName = SFCC1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -129,9 +129,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfcc1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfcc1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfcc1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfci1000.pfb
+begin /usr/share/fonts/X11/Type1/sfci1000.pfb
   FontName = SFCI1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -140,9 +140,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfci1000.pfb
   Width = Variable
   Shape = Normal Italic
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfci1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfci1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfdh1000.pfb
+begin /usr/share/fonts/X11/Type1/sfdh1000.pfb
   FontName = SFDH1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -151,9 +151,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfdh1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfdh1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfdh1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sffb1000.pfb
+begin /usr/share/fonts/X11/Type1/sffb1000.pfb
   FontName = SFFB1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -162,9 +162,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sffb1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sffb1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sffb1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfff1000.pfb
+begin /usr/share/fonts/X11/Type1/sfff1000.pfb
   FontName = SFFF1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -173,9 +173,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfff1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfff1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfff1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sffi1000.pfb
+begin /usr/share/fonts/X11/Type1/sffi1000.pfb
   FontName = SFFI1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -184,9 +184,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sffi1000.pfb
   Width = Variable
   Shape = Normal Italic
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sffi1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sffi1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sffs1000.pfb
+begin /usr/share/fonts/X11/Type1/sffs1000.pfb
   FontName = SFFS1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -195,9 +195,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sffs1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sffs1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sffs1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfit1000.pfb
+begin /usr/share/fonts/X11/Type1/sfit1000.pfb
   FontName = SFIT1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -206,9 +206,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfit1000.pfb
   Width = Fixed
   Shape = Normal Italic
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfit1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfit1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfoc1000.pfb
+begin /usr/share/fonts/X11/Type1/sfoc1000.pfb
   FontName = SFOC1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -217,9 +217,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfoc1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfoc1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfoc1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfocc10.pfb
+begin /usr/share/fonts/X11/Type1/sfocc10.pfb
   FontName = SFOCC10
   Charset = ISO8859-1
   Family = Computer_Modern_Concrete
@@ -228,9 +228,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfocc10.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfocc10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfocc10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sform10.pfb
+begin /usr/share/fonts/X11/Type1/sform10.pfb
   FontName = SFORM10
   Charset = ISO8859-1
   Family = Computer_Modern_Concrete
@@ -239,9 +239,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sform10.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sform10.afm
+  AFM = /usr/share/fonts/X11/Type1/sform10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfosl10.pfb
+begin /usr/share/fonts/X11/Type1/sfosl10.pfb
   FontName = SFOSL10
   Charset = ISO8859-1
   Family = Computer_Modern_Concrete
@@ -250,9 +250,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfosl10.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfosl10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfosl10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfoti10.pfb
+begin /usr/share/fonts/X11/Type1/sfoti10.pfb
   FontName = SFOTI10
   Charset = ISO8859-1
   Family = Computer_Modern_Concrete
@@ -261,9 +261,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfoti10.pfb
   Width = Variable
   Shape = Normal Italic
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfoti10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfoti10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfrb1000.pfb
+begin /usr/share/fonts/X11/Type1/sfrb1000.pfb
   FontName = SFRB1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -272,9 +272,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfrb1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfrb1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfrb1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfrm1000.pfb
+begin /usr/share/fonts/X11/Type1/sfrm1000.pfb
   FontName = SFRM1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -283,9 +283,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfrm1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfrm1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfrm1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfsc1000.pfb
+begin /usr/share/fonts/X11/Type1/sfsc1000.pfb
   FontName = SFSC1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -294,9 +294,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfsc1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfsc1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfsc1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfsi1000.pfb
+begin /usr/share/fonts/X11/Type1/sfsi1000.pfb
   FontName = SFSI1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -305,9 +305,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfsi1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfsi1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfsi1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfsl1000.pfb
+begin /usr/share/fonts/X11/Type1/sfsl1000.pfb
   FontName = SFSL1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -316,9 +316,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfsl1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfsl1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfsl1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfso1000.pfb
+begin /usr/share/fonts/X11/Type1/sfso1000.pfb
   FontName = SFSO1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -327,9 +327,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfso1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfso1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfso1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfss1000.pfb
+begin /usr/share/fonts/X11/Type1/sfss1000.pfb
   FontName = SFSS1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -338,9 +338,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfss1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfss1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfss1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfssdc10.pfb
+begin /usr/share/fonts/X11/Type1/sfssdc10.pfb
   FontName = SFSSDC10
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -349,9 +349,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfssdc10.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfssdc10.afm
+  AFM = /usr/share/fonts/X11/Type1/sfssdc10.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfst1000.pfb
+begin /usr/share/fonts/X11/Type1/sfst1000.pfb
   FontName = SFST1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -360,9 +360,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfst1000.pfb
   Width = Fixed
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfst1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfst1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfsx1000.pfb
+begin /usr/share/fonts/X11/Type1/sfsx1000.pfb
   FontName = SFSX1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -371,9 +371,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfsx1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfsx1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfsx1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sftc1000.pfb
+begin /usr/share/fonts/X11/Type1/sftc1000.pfb
   FontName = SFTC1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -382,9 +382,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sftc1000.pfb
   Width = Fixed
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sftc1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sftc1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfti1000.pfb
+begin /usr/share/fonts/X11/Type1/sfti1000.pfb
   FontName = SFTI1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -393,9 +393,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfti1000.pfb
   Width = Variable
   Shape = Normal Italic
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfti1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfti1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sftt1000.pfb
+begin /usr/share/fonts/X11/Type1/sftt1000.pfb
   FontName = SFTT1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -404,9 +404,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sftt1000.pfb
   Width = Fixed
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sftt1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sftt1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfui1000.pfb
+begin /usr/share/fonts/X11/Type1/sfui1000.pfb
   FontName = SFUI1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -415,9 +415,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfui1000.pfb
   Width = Variable
   Shape = Normal Italic
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfui1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfui1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfvi1000.pfb
+begin /usr/share/fonts/X11/Type1/sfvi1000.pfb
   FontName = SFVI1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -426,9 +426,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfvi1000.pfb
   Width = Variable
   Shape = Normal Italic
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfvi1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfvi1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfvt1000.pfb
+begin /usr/share/fonts/X11/Type1/sfvt1000.pfb
   FontName = SFVT1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -437,9 +437,9 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfvt1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfvt1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfvt1000.afm
 end
-begin /usr/X11R6/lib/X11/fonts/Type1/sfxc1000.pfb
+begin /usr/share/fonts/X11/Type1/sfxc1000.pfb
   FontName = SFXC1000
   Charset = ISO8859-1
   Family = Computer_Modern
@@ -448,5 +448,5 @@ begin /usr/X11R6/lib/X11/fonts/Type1/sfxc1000.pfb
   Width = Variable
   Shape = Normal Upright
   Priority = 20
-  AFM = /usr/X11R6/lib/X11/fonts/Type1/sfxc1000.afm
+  AFM = /usr/share/fonts/X11/Type1/sfxc1000.afm
 end
