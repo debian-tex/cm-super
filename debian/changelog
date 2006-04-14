@@ -7,9 +7,10 @@ cm-super (0.3.3-4) unstable; urgency=low
     - Move pfb/afm links from X11R6 hierachy to /usr/share/fonts/X11
     - remove lintian override file
     - build-depends to debhelper >= 5.0.29
-    - adapt location of file in defome hints file
+    - adapt location of file in defoma hints file
+    - remove installation of X11R6/fonts/Type1 directory
 
- -- Norbert Preining <preining@logic.at>  Thu, 13 Apr 2006 13:31:00 +0200
+ -- Norbert Preining <preining@logic.at>  Fri, 14 Apr 2006 19:26:19 +0200
 
 cm-super (0.3.3-3) unstable; urgency=low
 
