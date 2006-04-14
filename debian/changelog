@@ -1,6 +1,7 @@
 cm-super (0.3.3-4) unstable; urgency=low
 
-  * Switch to dh_installtex usage, adapt the control file.
+  * Switch to dh_installtex usage, adapt the control file, remove the
+    respective stuff in the maintainer scripts
   * Add encoding entries for microsoft-cp1251 and iso8859-5
     (Closes: #332672)
   * X fonts transition (Closes: #362324)

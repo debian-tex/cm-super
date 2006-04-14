@@ -1,42 +1,6 @@
 #!/bin/sh -e
 
-create_fontmaps ()
-{
-    tempfile=`mktemp -p /tmp cm-super.updmap.XXXXXXXX`
-    echo -n "Running updmap-sys. This may take some time. ..."
-    if updmap-sys > $tempfile 2>&1 ; then
-      rm -f $tempfile
-      echo " done."
-    else
-      echo
-      echo "updmap-sys failed. Output has been stored in"
-      echo "$tempfile"
-      echo "Please include this file if you report a bug."
-      echo
-      exit 1
-    fi
-}
-
-update_lsr_files ()
-{
-    tempfile=`mktemp -p /tmp cm-super.mktexlsr.XXXXXXXX`
-    echo -n "Running mktexlsr. This may take some time. ..."
-    if mktexlsr /usr/share/texmf > $tempfile 2>&1 ; then
-         rm -f $tempfile
-         echo " done."
-    else
-         echo
-         echo "mktexlsr failed. Output has been stored in"
-         echo "$tempfile"
-         echo "Please include this file if you report a bug."
-         echo
-         exit 1
-    fi
-}
-
-
 # Extract the .pfb files
-
 case "$1" in
     configure)
     	cd /usr/share/texmf/fonts/type1/public/cm-super
@@ -54,16 +18,9 @@ case "$1" in
           echo "Please include this file if you report a bug."
           echo
         fi
-	set -e
-	update-updmap
-	update_lsr_files
-	create_fontmaps
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
-	update-updmap
-	update_lsr_files
-	create_fontmaps
     ;;
 
     *)
