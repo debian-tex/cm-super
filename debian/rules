@@ -74,6 +74,9 @@ install-stamp-cmsuperx11: build-stamp
 		gunzip -c $$i > debian/$(x11package)/usr/share/texmf/fonts/afm/public/cm-super/$$bn ; \
 		echo "usr/share/texmf/fonts/afm/public/cm-super/$$bn usr/share/fonts/X11/Type1/$$bn" >> debian/$(x11package).links ; \
 	done
+	#
+	echo "THIS IS NOT NECESSARILY THE RIGHT PLACE CHECK THIS!!!" >&2
+	exit 1
 	cp debian/fonts.scale debian/$(x11package)/etc/X11/fonts/Type1/cm-super-x11.scale
 	touch install-stamp-cmsuperx11
 

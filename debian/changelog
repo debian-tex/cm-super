@@ -1,4 +1,4 @@
-cm-super (0.3.3-4) unstable; urgency=low
+cm-super (0.3.3-4) UNRELEASED; urgency=low
 
   * Switch to dh_installtex usage, adapt the control file, remove the
     respective stuff in the maintainer scripts
@@ -7,7 +7,7 @@ cm-super (0.3.3-4) unstable; urgency=low
   * X fonts transition (Closes: #362324)
     - Move pfb/afm links from X11R6 hierachy to /usr/share/fonts/X11
     - remove lintian override file
-    - build-depends to debhelper >= 5.0.29
+    - build-depends to debhelper >= 5.0.31
     - adapt location of file in defoma hints file
     - remove installation of X11R6/fonts/Type1 directory
 
