@@ -10,8 +10,9 @@ cm-super (0.3.3-4) UNRELEASED; urgency=low
     - build-depends to debhelper >= 5.0.31
     - adapt location of file in defoma hints file
     - remove installation of X11R6/fonts/Type1 directory
+    - install .scale file into /e/X11/fonts/X11R7/Type1
 
- -- Norbert Preining <preining@logic.at>  Fri, 14 Apr 2006 19:26:19 +0200
+ -- Norbert Preining <preining@logic.at>  Tue, 18 Apr 2006 17:16:00 +0200
 
 cm-super (0.3.3-3) unstable; urgency=low
 
