@@ -8,7 +8,7 @@
 #export DH_VERBOSE=1
 
 # This is the debhelper compatibility version to use.
-export DH_COMPAT=4
+export DH_COMPAT=5
 
 package=cm-super
 x11package=cm-super-x11
@@ -64,7 +64,9 @@ install-stamp: install-stamp-cmsuper install-stamp-cmsuperx11
 install-stamp-cmsuperx11: build-stamp
 	dh_testdir
 	dh_testroot
-	dh_installdirs
+	dh_installdirs	--package=$(x11package)			\
+		usr/share/texmf/fonts/afm/public/cm-super	\
+		usr/share/fonts/X11/Type1
 	for i in pfb/*1000.pfb pfb/*10.pfb ; do \
 		bn=`basename $$i` ; \
 		echo "usr/share/texmf/fonts/type1/public/cm-super/$$bn usr/share/fonts/X11/Type1/$$bn" >> debian/$(x11package).links ; \
@@ -74,7 +76,8 @@ install-stamp-cmsuperx11: build-stamp
 		gunzip -c $$i > debian/$(x11package)/usr/share/texmf/fonts/afm/public/cm-super/$$bn ; \
 		echo "usr/share/texmf/fonts/afm/public/cm-super/$$bn usr/share/fonts/X11/Type1/$$bn" >> debian/$(x11package).links ; \
 	done
-	#
+	# 
+	dh_installdirs  --package=$(x11package)  etc/X11/fonts/X11R7/Type1
 	cp debian/fonts.scale debian/$(x11package)/etc/X11/fonts/X11R7/Type1/cm-super-x11.scale
 	touch install-stamp-cmsuperx11
 
@@ -82,7 +85,13 @@ install-stamp-cmsuperx11: build-stamp
 install-stamp-cmsuper: build-stamp
 	dh_testdir 
 	dh_testroot
-	dh_installdirs
+	dh_installdirs	--package=$(package)			\
+		usr/share/texmf/fonts/type1/public/cm-super	\
+		usr/share/texmf/fonts/enc/dvips/cm-super	\
+		usr/share/texmf/fonts/map/dvips/cm-super	\
+		usr/share/texmf/dvips/config			\
+		usr/share/texmf/tex/latex/cm-super		\
+		usr/share/lintian/overrides
 	cd pfb ; for i in *.pfb ; do \
 		touch ../debian/$(package)/usr/share/texmf/fonts/type1/public/cm-super/$$i ; \
 	done
@@ -95,9 +104,6 @@ install-stamp-cmsuper: build-stamp
 	cp dvips/*.enc debian/$(package)/$(ENCLOCATION)/
 	cp dvips/config.cm-super debian/$(package)/$(CONFIGLOCATION)/
 
-	# use dh_installtex instead of manual installation
-	#cp debian/updmap-config.cfg debian/$(package)/etc/texmf/updmap.d/50$(package).cfg
-	#echo "50$(package)" > debian/$(package)/var/lib/tex-common/fontmap-cfg/$(package).list
 	dh_installtex --package=$(package) --priority=50	\
 				map=MixedMap,cm-super-t1.map	\
 				map=MixedMap,cm-super-t2a.map	\

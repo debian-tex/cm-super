@@ -1,9 +1,8 @@
-cm-super (0.3.3-4) UNRELEASED; urgency=low
+cm-super (0.3.3-4) unstable; urgency=low
 
   * Switch to dh_installtex usage, adapt the control file, remove the
     respective stuff in the maintainer scripts
-  * Add encoding entries for microsoft-cp1251 and iso8859-5
-    (Closes: #332672)
+  * Add encoding entries for microsoft-cp1251 and iso8859-5 (Closes: #332672)
   * X fonts transition (Closes: #362324)
     - Move pfb/afm links from X11R6 hierachy to /usr/share/fonts/X11
     - remove lintian override file
@@ -11,8 +10,9 @@ cm-super (0.3.3-4) UNRELEASED; urgency=low
     - adapt location of file in defoma hints file
     - remove installation of X11R6/fonts/Type1 directory
     - install .scale file into /e/X11/fonts/X11R7/Type1
+  * move the dir creation from package.dirs to the rules file
 
- -- Norbert Preining <preining@logic.at>  Tue, 18 Apr 2006 17:16:00 +0200
+ -- Norbert Preining <preining@logic.at>  Wed, 19 Apr 2006 01:30:09 +0200
 
 cm-super (0.3.3-3) unstable; urgency=low
 
