@@ -14,7 +14,7 @@ package=cm-super
 x11package=cm-super-x11
 
 SHELL = /bin/bash
-CMD=debian/$(package)/usr/share/texmf/fonts/type1/public/cm-super/cm-super.t1c
+CMD=debian/$(package)/usr/share/cm-super/cm-super.t1c
 CMT=cm-super.t1c
 
 MAPLOCATION=usr/share/texmf/fonts/map/dvips/cm-super
@@ -91,7 +91,8 @@ install-stamp-cmsuper: build-stamp
 		usr/share/texmf/fonts/map/dvips/cm-super	\
 		usr/share/texmf/dvips/config			\
 		usr/share/texmf/tex/latex/cm-super		\
-		usr/share/lintian/overrides
+		usr/share/lintian/overrides			\
+		usr/share/cm-super
 	cd pfb ; for i in *.pfb ; do \
 		touch ../debian/$(package)/usr/share/texmf/fonts/type1/public/cm-super/$$i ; \
 	done
@@ -130,11 +131,11 @@ binary-indep:  build install
 	dh_installdeb
 	dh_gencontrol
 	# make md5sums for all but the pfb files and the t1c file
-	dh_md5sums -X usr/share/texmf/fonts/type1/public/cm-super
+	dh_md5sums -X usr/share/texmf/fonts/type1/public/cm-super -X usr/share/cm-super
 	# create the correct md5sums for the files generated on postinst
 	( cd pfb ; for i in *.pfb ; do cat $$i | md5sum - | sed -e "s|-|usr/share/texmf/fonts/type1/public/cm-super/$$i|" ; done ) >> debian/$(package)/DEBIAN/md5sums
-	# add the md5sum for the t1c file
-	( cd debian/$(package) ; md5sum usr/share/texmf/fonts/type1/public/cm-super/cm-super.t1c ) >> debian/$(package)/DEBIAN/md5sums
+	# add the md5sum of the empty file (t1c will be emptied on postinst)
+	echo "d41d8cd98f00b204e9800998ecf8427e  usr/share/cm-super/cm-super.t1c" >> debian/$(package)/DEBIAN/md5sums
 	dh_builddeb
 
 binary-arch:

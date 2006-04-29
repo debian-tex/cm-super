@@ -11,8 +11,11 @@ cm-super (0.3.3-4) unstable; urgency=low
     - remove installation of X11R6/fonts/Type1 directory
     - install .scale file into /e/X11/fonts/X11R7/Type1
   * move the dir creation from package.dirs to the rules file
+  * move the t1c file to /usr/share/cm-super, and empty it after installation
+    of the fonts. Adjust the md5sum magic for including the right md5sum for
+    the empty file cm-super.t1c.
 
- -- Norbert Preining <preining@logic.at>  Wed, 19 Apr 2006 01:30:09 +0200
+ -- Norbert Preining <preining@logic.at>  Sat, 29 Apr 2006 14:04:25 +0200
 
 cm-super (0.3.3-3) unstable; urgency=low
 

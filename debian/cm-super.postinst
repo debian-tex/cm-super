@@ -7,9 +7,10 @@ case "$1" in
 	tempfile=`mktemp -p /tmp cm-super.checkrun.XXXXXXXX`
 	echo -n "Creating fonts. This may take some time. ..."
 	set +e
-	t1c2pfb <cm-super.t1c > $tempfile 2>&1
+	t1c2pfb </usr/share/cm-super/cm-super.t1c > $tempfile 2>&1
 	if [ $? = 0 ] ; then
 	  rm -f $tempfile
+	  : > /usr/share/cm-super/cm-super.t1c
 	  echo " done."
 	else
           echo
