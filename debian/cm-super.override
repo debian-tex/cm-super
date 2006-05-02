@@ -407,3 +407,4 @@ cm-super: md5sum-mismatch usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.p
 cm-super: md5sum-mismatch usr/share/texmf/fonts/type1/public/cm-super/sfrb2074.pfb
 cm-super: md5sum-mismatch usr/share/texmf/fonts/type1/public/cm-super/sfbl0500.pfb
 cm-super: md5sum-mismatch usr/share/texmf/fonts/type1/public/cm-super/sfosl6.pfb
+cm-super: md5sum-mismatch usr/share/cm-super/cm-super.t1c

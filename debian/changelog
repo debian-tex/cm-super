@@ -13,7 +13,7 @@ cm-super (0.3.3-4) unstable; urgency=low
   * move the dir creation from package.dirs to the rules file
   * move the t1c file to /usr/share/cm-super, and empty it after installation
     of the fonts. Adjust the md5sum magic for including the right md5sum for
-    the empty file cm-super.t1c.
+    the empty file cm-super.t1c. Add an md5sum override to cm-super.override.
 
  -- Norbert Preining <preining@logic.at>  Sat, 29 Apr 2006 14:04:25 +0200
 
