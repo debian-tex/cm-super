@@ -6,4 +6,7 @@ TODO for debian cm-super package:
   (carefull on major version changes!)
 * check whether dependencies are correct for texlive on tfm/mf files, and
   should we recommend / suggest texlive-langcyrillic?
-* use dh_installtex with next version of tex-common
+* go back to /etc/X11/fonts/Type1 instead of /etc/X11/fonts/X11R7/Type1
+  I hate this, now I have to care for conf file changes and updates ....
+  could debhelper maintainers think about this before sending bug reports
+  and bugging other maintainers...
