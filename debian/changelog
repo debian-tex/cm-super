@@ -2,8 +2,9 @@ cm-super (0.3.3-5) unstable; urgency=low
 
   * remove the X11R7 scale file as it never entered testing and the
     X11R7 hierachy under /e/X/ is deprecated now.
+  * Make upgrades from testing version honor changes in the config file.
 
- -- Norbert Preining <preining@logic.at>  Fri,  2 Jun 2006 16:56:04 +0200
+ -- Norbert Preining <preining@logic.at>  Fri,  2 Jun 2006 22:32:11 +0200
 
 cm-super (0.3.3-4) unstable; urgency=low
 

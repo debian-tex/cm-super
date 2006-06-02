@@ -1,24 +1,27 @@
 #!/bin/sh -e
 
-#
-# we remove the intermediate X11R7 .scale file as this approach never 
-# entered testing and the period was quite short.
+if [ $# -eq 2 ]  && ( [ "$1" = "install" ] || [ "$1" = "upgrade" ] ); then
 
-case "$1" in
-    upgrade|install)
-	set -e
-	rm -f /etc/X11/fonts/X11R7/Type1/cm-super-x11.scale
-    ;;
+    # Don't care for changes in the X11R7 cm-super-x11.scale
+    if [ "$2" = 0.3.3-4 ]; then
+        rm -f /etc/X11/fonts/X11R7/Type1/cm-super-x11.scale
+    fi
 
-    abort-upgrade)
-    ;;
-
-    *)
-        echo "preinst called with unknown argument \`$1'" >&2
-        exit 1
-    ;;
-esac
-
+    # remove the old cm-super-x11.scale file iff it hasn't been
+    # changed. If it has been changed, leave it in place and
+    # dpkg will ask about the changes.
+    if dpkg --compare-versions "$2" le 0.3.3-3 ; then
+        f=/etc/X11/fonts/Type1/cm-super-x11.scale
+	if [ -r $f ] ; then
+            orig=$(grep "$f[[:space:]]" /var/lib/dpkg/status | cut -f 3 -d ' ')
+	    curr=$(md5sum "$f" |  cut -d ' ' -f 1)
+	    if [ "$orig" = "$curr" ] ; then
+	        # the orig file wasn't change, so remove it happily
+		rm "$f"
+	    fi
+	fi
+    fi
+fi
 
 #DEBHELPER#
 
