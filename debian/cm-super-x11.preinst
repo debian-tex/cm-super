@@ -1,23 +1,9 @@
 #!/bin/sh -e
 
 if [ $# -eq 2 ]  && ( [ "$1" = "install" ] || [ "$1" = "upgrade" ] ); then
-
     if [ "$2" = 0.3.3-4 ]; then
         # Don't care for changes in the X11R7 cm-super-x11.scale
         rm -f /etc/X11/fonts/X11R7/Type1/cm-super-x11.scale
-
-        # remove the old cm-super-x11.scale file iff it hasn't been
-        # changed. If it has been changed, leave it in place and
-        # dpkg will ask about the changes.
-        f=/etc/X11/fonts/Type1/cm-super-x11.scale
-	if [ -r $f ] ; then
-	    orig=be7d214e3a5d2b9f7155de31e8c2e172
-	    curr=$(md5sum "$f" |  cut -d ' ' -f 1)
-	    if [ "$orig" = "$curr" ] ; then
-	        # the orig file wasn't change, so remove it happily
-		rm "$f"
-	    fi
-	fi
     fi
 fi
 
