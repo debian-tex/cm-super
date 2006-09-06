@@ -16,5 +16,5 @@ Later on these files will move to TEXMFMAIN=/usr/share/texmf.
 Better would be to use the backport of teTeX3 together with a straight
 forward backport of this package.
 
-Norbert Preining <preining@logic.at>
+Norbert Preining <preining@debian.org>
 

@@ -3,7 +3,7 @@ Section: tex
 Priority: optional
 Build-Depends: debhelper (>= 5.0.35)
 Build-Depends-Indep: pfb2t1c2pfb, defoma (>= 0.7.0), tex-common (>= 0.19)
-Maintainer: Norbert Preining <preining@logic.at>
+Maintainer: Norbert Preining <preining@debian.org>
 Standards-Version: 3.7.2
 
 Package: cm-super
