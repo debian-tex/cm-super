@@ -2,15 +2,33 @@ Source: cm-super
 Section: tex
 Priority: optional
 Build-Depends: debhelper (>= 5.0.35)
-Build-Depends-Indep: pfb2t1c2pfb, defoma (>= 0.7.0), tex-common (>= 0.19)
+Build-Depends-Indep: defoma (>= 0.7.0), tex-common (>= 0.19), pfb2t1c2pfb
 Maintainer: Norbert Preining <preining@debian.org>
 Standards-Version: 3.7.2
+
+Package: cm-super-minimal
+Architecture: all
+Depends: tex-common (>= 0.11), texlive-latex-recommended
+Replaces: cm-super (<< 0.3.3-6)
+Description: TeX font package (minimal version) with CM/EC in Type1 in T1, T2*, TS1, X2 enc
+ This package ships the 10pt version of the various fonts. For the full
+ set please install cm-super.
+ .
+ The CM-Super package contains Type 1 fonts converted from METAFONT
+ fonts and covers entire EC/TC, EC Concrete, EC Bright and LH fonts
+ (Computer Modern font families). All European and Cyrillic writings
+ are covered. Each Type 1 font program contains ALL glyphs from the
+ following standard LaTeX font encodings: T1, TS1, T2A, T2B, T2C, X2,
+ and also Adobe StandardEncoding (585 glyphs per non-SC font and 468
+ glyphs per SC font), and could be reencoded to any of these encodings
+ using standard dvips or pdftex facilities (the corresponding support
+ files are also included).
 
 Package: cm-super
 Architecture: all
 Replaces: pts-tetex-cm-super
 Conflicts: pts-tetex-cm-super
-Depends: tex-common (>= 0.11), texlive-latex-recommended, pfb2t1c2pfb, cm-super-minimal
+Depends: tex-common (>= 0.11), texlive-latex-recommended, cm-super-minimal
 Description: TeX font package (full version) with CM (EC) in Type1 in T1, T2*, TS1, X2 enc
  This package ships the full set of cm-super fonts, for a minimal variant
  install cm-super-minimal.
@@ -32,20 +50,3 @@ Description: Make the cm-super fonts available to X11
  This package makes the cm-super fonts available to X11. This package
  does not contain any fonts itself but allows to reuse the cm-super
  fonts as X11 screen fonts.
-
-Package: cm-super-minimal
-Architecture: all
-Depends: tex-common (>= 0.11), texlive-latex-recommended, pfb2t1c2pfb
-Description: TeX font package (minimal version) with CM (EC) in Type1 in T1, T2*, TS1, X2 enc
- This package ships the 10pt version of the various fonts. For the full
- set please install cm-super.
- .
- The CM-Super package contains Type 1 fonts converted from METAFONT
- fonts and covers entire EC/TC, EC Concrete, EC Bright and LH fonts
- (Computer Modern font families). All European and Cyrillic writings
- are covered. Each Type 1 font program contains ALL glyphs from the
- following standard LaTeX font encodings: T1, TS1, T2A, T2B, T2C, X2,
- and also Adobe StandardEncoding (585 glyphs per non-SC font and 468
- glyphs per SC font), and could be reencoded to any of these encodings
- using standard dvips or pdftex facilities (the corresponding support
- files are also included).

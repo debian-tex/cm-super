@@ -1,10 +1,10 @@
-cm-super (0.3.3-6) UNRELEASED; urgency=low
+cm-super (0.3.3-6~1) experimental; urgency=low
 
   * NOT RELEASED YET
   * change maintainer email to preining@debian.org
-  * create cm-super-minimal package
+  * create cm-super-minimal package (too many changes to list)
 
- -- Norbert Preining <preining@debian.org>  Tue, 24 Apr 2007 21:29:49 +0200
+ -- Norbert Preining <preining@debian.org>  Fri, 18 May 2007 22:17:25 +0200
 
 cm-super (0.3.3-5) unstable; urgency=low
 
