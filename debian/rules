@@ -7,11 +7,14 @@
 export DH_COMPAT=5
 
 package=cm-super
+minpackage=cm-super-minimal
 x11package=cm-super-x11
 
 SHELL = /bin/bash
-CMD=debian/$(package)/usr/share/cm-super/cm-super.t1c
-CMT=cm-super.t1c
+NORMALTC=cm-super.t1c
+MINIMALTC=cm-super-minimal.t1c
+DEBNORMALTC=debian/$(package)/usr/share/cm-super/cm-super.t1c
+DEBMINIMALTC=debian/$(package)/usr/share/cm-super/cm-super-minimal.t1c
 
 MAPLOCATION=usr/share/texmf/fonts/map/dvips/cm-super
 ENCLOCATION=usr/share/texmf/fonts/enc/dvips/cm-super
@@ -29,6 +32,15 @@ install: install-stamp
 
 binary: binary-indep binary-arch
 
+
+MINFILES=				\
+	cm-super-minimal-t1.map		\
+	cm-super-minimal-t2a.map	\
+	cm-super-minimal-t2b.map	\
+	cm-super-minimal-t2c.map	\
+	cm-super-minimal-ts1.map	\
+	cm-super-minimal-x2.map		\
+	
 ###################
 #
 # Sub targets
@@ -36,13 +48,24 @@ binary: binary-indep binary-arch
 ###################
 build-stamp:
 	dh_testdir
-	$(MAKE) -f debian/rules $(CMT)
+	$(MAKE) -f debian/rules cm-super.t1c cm-super-minimal.t1c
+	$(MAKE) -f debian/rules minimal-files
 	touch build-stamp
 
-$(CMT):
-	mkdir -p $(dir $(CMT))
-	touch $(CMT)
-	(cd pfb; for F in *.pfb; do echo "$$F" >&2; pfb2t1c "$$F"; done) >$@
+minimal-files:
+	
+$(MINIMALTC):
+	mkdir -p $(dir $(MINIMALTC))
+	touch $(MINIMALTC)
+	(cd pfb; for F in `cat ../debian/fonts.cm-super-minimal`; do echo "$$F" >&2; pfb2t1c "$$F"; done) >$@
+
+$(NORMALTC):
+	mkdir -p $(dir $(NORMALTC))
+	touch $(NORMALTC)
+	(cd pfb; for F in *.pfb; do \
+		if ! grep -q "$$F" ../debian/fonts.cm-super-minimal ; then \
+			echo "$$F" >&2; pfb2t1c "$$F"; \
+		fi ; done) >$@
 
 clean: debian/control
 	dh_testdir
@@ -63,20 +86,56 @@ install-stamp-cmsuperx11: build-stamp
 	dh_installdirs	--package=$(x11package)			\
 		usr/share/texmf/fonts/afm/public/cm-super	\
 		usr/share/fonts/X11/Type1
-	for i in pfb/*1000.pfb pfb/*10.pfb ; do \
-		bn=`basename $$i` ; \
-		echo "usr/share/texmf/fonts/type1/public/cm-super/$$bn usr/share/fonts/X11/Type1/$$bn" >> debian/$(x11package).links ; \
-	done
-	for i in afm/*1000.afm.gz afm/*10.afm.gz ; do \
-		bn=`basename $$i .gz` ; \
-		gunzip -c $$i > debian/$(x11package)/usr/share/texmf/fonts/afm/public/cm-super/$$bn ; \
-		echo "usr/share/texmf/fonts/afm/public/cm-super/$$bn usr/share/fonts/X11/Type1/$$bn" >> debian/$(x11package).links ; \
+	for i in `cat debian/fonts.cm-super-minimal` ; do \
+		bn=`basename $$i .pfb` ; \
+		echo "usr/share/texmf/fonts/type1/public/cm-super/$$bn.pfb usr/share/fonts/X11/Type1/$$bn.pfb" >> debian/$(x11package).links ; \
+		gunzip -c afm/$$bn.afm.gz > debian/$(x11package)/usr/share/texmf/fonts/afm/public/cm-super/$$bn.afm ; \
+		echo "usr/share/texmf/fonts/afm/public/cm-super/$$bn.afm usr/share/fonts/X11/Type1/$$bn.afm" >> debian/$(x11package).links ; \
 	done
 	# 
 	dh_installdirs  --package=$(x11package)  etc/X11/fonts/Type1
 	cp debian/fonts.scale debian/$(x11package)/etc/X11/fonts/Type1/cm-super-x11.scale
 	touch install-stamp-cmsuperx11
 
+
+install-stamp-cmsuper-minimal: build-stamp
+	dh_testdir
+	dh_testroot
+	dh_installdirs  --package=$(minpackage)		\
+		usr/share/texmf/fonts/type1/public/cm-super	\
+		usr/share/texmf/fonts/enc/dvips/cm-super	\
+		usr/share/texmf/fonts/map/dvips/cm-super	\
+		usr/share/texmf/dvips/config			\
+		usr/share/texmf/tex/latex/cm-super		\
+		usr/share/lintian/overrides			\
+		usr/share/cm-super
+	cd pfb ; for i in *.pfb ; do \
+		if ! grep -q "$$F" ../debian/fonts.cm-super-minimal ; then \
+			touch ../debian/$(minpackage)/usr/share/texmf/fonts/type1/public/cm-super/$$i ; \
+		fi ; done) >$@
+	done
+	ln $(DEBMINIMALTC) $(MINIMALTC)
+	chown 0.0 $(MINIMALTC)
+	cp type1ec.sty debian/$(minpackage)/usr/share/texmf/tex/latex/cm-super
+	#
+	cp dvips/*-minimal.map debian/$(minpackage)/$(MAPLOCATION)/
+	cp dvips/*.enc debian/$(minpackage)/$(ENCLOCATION)/
+	cp dvips/config.cm-super-minimal debian/$(minpackage)/$(CONFIGLOCATION)/
+
+	dh_installtex --package=$(minpackage) --priority=50	\
+				map=MixedMap,cm-super-minimal-t1.map	\
+				map=MixedMap,cm-super-minimal-t2a.map	\
+				map=MixedMap,cm-super-minimal-t2b.map	\
+				map=MixedMap,cm-super-minimal-t2c.map	\
+				map=MixedMap,cm-super-minimal-ts1.map	\
+				map=MixedMap,cm-super-minimal-x2.map
+
+	# install the override file for lintian
+	cp debian/$(minpackage).override debian/$(minpackage)/usr/share/lintian/overrides/$(minpackage)
+	touch install-stamp-cmsuper-minimal
+
+
+binary-indep:  build install
 
 install-stamp-cmsuper: build-stamp
 	dh_testdir 
@@ -92,10 +151,9 @@ install-stamp-cmsuper: build-stamp
 	cd pfb ; for i in *.pfb ; do \
 		touch ../debian/$(package)/usr/share/texmf/fonts/type1/public/cm-super/$$i ; \
 	done
-	ln $(CMT) $(CMD)
-# ^^^ ln occupies less space on disk than cp_r
-	chown 0.0 $(CMT)
-	cp type1ec.sty debian/$(package)/usr/share/texmf/tex/latex/cm-super
+	ln $(DEBNORMALTC) $(NORMALTC)
+	# ^^^ ln occupies less space on disk than cp_r
+	chown 0.0 $(NORMALTC)
 	#
 	cp dvips/*.map debian/$(package)/$(MAPLOCATION)/
 	cp dvips/*.enc debian/$(package)/$(ENCLOCATION)/
