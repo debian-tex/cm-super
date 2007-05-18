@@ -1,10 +1,11 @@
 cm-super (0.3.3-6~1) experimental; urgency=low
 
   * NOT RELEASED YET
-  * change maintainer email to preining@debian.org
+  * change maintainer email to debian-tex-maint ML, add myself to the
+    Uploaders
   * create cm-super-minimal package (too many changes to list)
 
- -- Norbert Preining <preining@debian.org>  Fri, 18 May 2007 22:17:25 +0200
+ -- Norbert Preining <preining@debian.org>  Fri, 18 May 2007 22:34:24 +0200
 
 cm-super (0.3.3-5) unstable; urgency=low
 

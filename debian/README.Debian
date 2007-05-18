@@ -10,6 +10,13 @@ the cm-super package, and use any of:
 	\usepackage[T1]{fontenc}
    For tex, load the fonts with \font, see below
 
+   BIG WARNING BIG WARNING BIG WARNING
+   If you DON'T have cm-super (the full package) installed you have to use
+   	\usepackage[10pt]{type1ec}
+   which uses only those cm-super fonts available in cm-super-minimal and
+   scale those fonts for other design sizes.
+   END WARNING END WARNING END WARNING
+
 1. Run tex/latex as usual. Run dvips as usual.
 
 2. Run pdftex/pdflatex as usual.
