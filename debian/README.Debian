@@ -30,13 +30,13 @@ Example LaTeX file using these fonts
 \usepackage[T1]{fontenc}
 \begin{document}
   Hello, World!\par
-  This example is written by \textit{Szabó Péter}.
+  This example is written by \textit{SzabÃ³ PÃ©ter}.
 
-  \texttt{Árvízt\H{u}r\H{o} tükörfúrógép} contains
+  \texttt{ÃrvÃ­zt\H{u}r\H{o} tÃ¼kÃ¶rfÃºrÃ³gÃ©p} contains
   all Hungarian accented wovels.
 \end{document}
 
-German Double-S (ß) variants (from INSTALL)
+German Double-S (ÃŸ) variants (from INSTALL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you wish to use the original CM germandbls (sharp s) shape,
 rather than the new EC one, change "germandbls" to "germandbls.alt"
@@ -49,5 +49,5 @@ cm-super.t1c is more compressible than the *.pfb files. See debian/postinst
 about restoring the *.pfb files from cm-super.t1c during package
 installation.
 
-Szabó Péter <pts@winter>, Sat, 29 Mar 2003 22:32:12 +0100
+SzabÃ³ PÃ©ter <pts@winter>, Sat, 29 Mar 2003 22:32:12 +0100
 Norbert Preining <preining@debian.org>, Tue, 27 Sep 2005 11:57:39 +0200
