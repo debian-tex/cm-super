@@ -1,12 +1,6 @@
-cm-super (0.3.3-6~2) experimental; urgency=low
+cm-super (0.3.3-6) unstable; urgency=low
 
   * change README.Debian encoding to UTF8 (thanks Ralf for noticing)
-
- -- Norbert Preining <preining@debian.org>  Sat, 09 Jun 2007 23:12:02 +0200
-
-cm-super (0.3.3-6~1) experimental; urgency=low
-
-  * NOT RELEASED YET
   * change maintainer email to debian-tex-maint ML, add myself to the
     Uploaders
   * create cm-super-minimal package (too many changes to list)
