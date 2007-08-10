@@ -152,12 +152,10 @@ binary-arch:
 binary-indep: build install
 	dh_testdir
 	dh_testroot
-	dh_installdocs FAQ README TODO debian/README.teTeX2
-	dh_installchangelogs ChangeLog
-	for i in FAQ README TODO README.teTeX2 ChangeLog README.Debian TODO.Debian ; do \
-		echo "usr/share/doc/$(minpackage)/$$i usr/share/doc/$(package)/$$i" >> debian/$(package).links ; \
-	done
-	dh_link
+	dh_installdocs -p $(minpackage) ChangeLog FAQ README TODO debian/README.teTeX2
+	dh_link -p $(package) usr/share/doc/$(minpackage) usr/share/doc/$(package)
+	dh_link -p $(x11package) usr/share/doc/$(minpackage) usr/share/doc/$(x11package)
+	dh_link -p $(minpackage)
 	dh_installxfonts --package=$(x11package)
 	dh_installdefoma --package=$(x11package)
 	dh_compress
