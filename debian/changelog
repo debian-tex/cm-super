@@ -7,7 +7,7 @@ cm-super (0.3.3-6) unstable; urgency=low
   * remove upgrade code from old-stable version from cm-super.preinst
   * make /u/s/d/cm-super(-x11) links to cm-super-minimal
 
- -- Norbert Preining <preining@debian.org>  Mon, 13 Aug 2007 09:14:26 +0200
+ -- Norbert Preining <preining@debian.org>  Mon, 13 Aug 2007 09:30:26 +0200
 
 cm-super (0.3.3-5) unstable; urgency=low
 
