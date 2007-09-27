@@ -1,3 +1,10 @@
+cm-super (0.3.3-7~1) unstable; urgency=low
+
+  * add a link /u/s/texmf/doc/fonts/cm-super -> /u/s/doc/cm-super-minimal
+    so that the documentation can be found by texdoctk (Closes: #444308)
+
+ -- Norbert Preining <preining@debian.org>  Thu, 27 Sep 2007 22:10:41 +0200
+
 cm-super (0.3.3-6) unstable; urgency=low
 
   * change README.Debian encoding to UTF8 (thanks Ralf for noticing)
