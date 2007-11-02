@@ -6,6 +6,8 @@ Build-Depends-Indep: defoma (>= 0.7.0), tex-common (>= 0.19), pfb2t1c2pfb
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Norbert Preining <preining@debian.org>
 Standards-Version: 3.7.2
+Vcs-Svn: svn://svn.debian.org/svn/debian-tex/cm-super/trunk
+Vcs-Browser: http://svn.debian.org/wsvn/debian-tex/cm-super/trunk/
 
 Package: cm-super-minimal
 Architecture: all
