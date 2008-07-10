@@ -1,10 +1,11 @@
-cm-super (0.3.3-7~1) unstable; urgency=low
+cm-super (0.3.4-1~1) unstable; urgency=low
 
+  * new upstream release
   * add a link /u/s/texmf/doc/fonts/cm-super -> /u/s/doc/cm-super-minimal
     so that the documentation can be found by texdoctk (Closes: #444308)
   * add Vcs-Svn and Vcs-Browser fields to debian/control
 
- -- Norbert Preining <preining@debian.org>  Fri, 02 Nov 2007 00:31:52 +0100
+ -- Norbert Preining <preining@debian.org>  Thu, 10 Jul 2008 14:53:04 +0200
 
 cm-super (0.3.3-6) unstable; urgency=low
 
