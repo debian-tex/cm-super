@@ -1,4 +1,4 @@
-cm-super (0.3.4-1~1) unstable; urgency=low
+cm-super (0.3.4-1) unstable; urgency=low
 
   * new upstream release
   * add a link /u/s/texmf/doc/fonts/cm-super -> /u/s/doc/cm-super-minimal
@@ -9,7 +9,7 @@ cm-super (0.3.4-1~1) unstable; urgency=low
   * remove the useless make clean in the debian rules file
   * recode copyright file into utf8
 
- -- Norbert Preining <preining@debian.org>  Thu, 10 Jul 2008 15:08:01 +0200
+ -- Norbert Preining <preining@debian.org>  Thu, 10 Jul 2008 15:42:57 +0200
 
 cm-super (0.3.3-6) unstable; urgency=low
 
