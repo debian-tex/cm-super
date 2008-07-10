@@ -74,7 +74,6 @@ clean: debian/control
 	-rm -f install-stamp-cmsuper-minimal
 	-rm -f install-stamp-cmsuperx11
 	-(cd dvips ; rm -f $(MINFILES) $(EXTFILES) tmp* )
-	-$(MAKE) clean
 	-rm -f debian/$(x11package).links debian/$(package).links
 	-rm -f cm-super.t1c
 	dh_clean

@@ -6,8 +6,9 @@ cm-super (0.3.4-1~1) unstable; urgency=low
   * add Vcs-Svn and Vcs-Browser fields to debian/control
   * remove pfb2t1c.c since we have that package in Debian
   * Standards version 3.8.0, no changes necessary
+  * remove the useless make clean in the debian rules file
 
- -- Norbert Preining <preining@debian.org>  Thu, 10 Jul 2008 14:57:28 +0200
+ -- Norbert Preining <preining@debian.org>  Thu, 10 Jul 2008 15:05:47 +0200
 
 cm-super (0.3.3-6) unstable; urgency=low
 
@@ -133,4 +134,4 @@ Local variables:
 mode: debian-changelog
 coding: utf-8
 End:
-# vim:set termencoding=iso8859-15 encoding=utf-8 fileencoding=utf-8: #
+# vim:set fileencoding=utf-8: #
