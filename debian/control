@@ -1,5 +1,5 @@
 Source: cm-super
-Section: tex
+Section: fonts
 Priority: optional
 Build-Depends: debhelper (>= 5.0.35)
 Build-Depends-Indep: defoma (>= 0.7.0), tex-common (>= 1.15), pfb2t1c2pfb

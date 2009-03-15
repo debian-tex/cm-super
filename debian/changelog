@@ -1,3 +1,10 @@
+cm-super (0.3.4-3) unstable; urgency=low
+
+  * unreleased
+  * change section to fonts
+
+ -- Norbert Preining <preining@debian.org>  Sun, 15 Mar 2009 19:00:19 +0100
+
 cm-super (0.3.4-2) unstable; urgency=low
 
   * bump build-dep on tex-common to >= 1.15 to get trigger support
