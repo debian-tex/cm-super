@@ -2,7 +2,7 @@ Source: cm-super
 Section: fonts
 Priority: optional
 Build-Depends: debhelper (>= 5.0.35)
-Build-Depends-Indep: defoma (>= 0.7.0), tex-common (>= 1.15), pfb2t1c2pfb
+Build-Depends-Indep: defoma (>= 0.7.0), tex-common (>= 1.18), pfb2t1c2pfb
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Norbert Preining <preining@debian.org>
 Standards-Version: 3.8.0
