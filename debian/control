@@ -51,5 +51,5 @@ Architecture: all
 Depends: cm-super-minimal, ${misc:Depends}
 Description: Make the cm-super fonts available to X11
  This package makes the cm-super fonts available to X11. This package
- does not contain any fonts itself but allows to reuse the cm-super
+ does not contain any fonts itself but allows one to reuse the cm-super
  fonts as X11 screen fonts.
