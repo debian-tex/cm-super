@@ -1,13 +1,13 @@
 cm-super (0.3.4-4) unstable; urgency=low
 
-  * UNRELEASED
   * remove defoma support, but keep the defoma file for now (Closes: #648873)
     . remove dh_installdefoma call in debian/rules
     . add rm_conffile calls to various maintainer scripts
     (thanks Christian Perrier for the patch)
-  * bump standards version to 3.9.1, no changes necessary
+  * bump standards version to 3.9.2, no changes necessary
+  * add funny build-arch and build-indep targets to make lintian happy
 
- -- Norbert Preining <preining@debian.org>  Wed, 16 Nov 2011 08:26:59 +0900
+ -- Norbert Preining <preining@debian.org>  Wed, 16 Nov 2011 08:36:06 +0900
 
 cm-super (0.3.4-3) unstable; urgency=low
 

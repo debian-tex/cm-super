@@ -33,7 +33,9 @@ cm-super.t1c:
 		fi ; \
 	done) >$@
 
-build: build-stamp
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE) -f debian/rules cm-super.t1c
