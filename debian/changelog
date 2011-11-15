@@ -1,3 +1,11 @@
+cm-super (0.3.4-4) unstable; urgency=low
+
+  * UNRELEASED
+  * remove defoma support, but keep the defoma file for now (Closes: #648873)
+  * bump standards version to 3.9.1, no changes necessary
+
+ -- Norbert Preining <preining@debian.org>  Wed, 16 Nov 2011 08:19:38 +0900
+
 cm-super (0.3.4-3) unstable; urgency=low
 
   * change section to fonts

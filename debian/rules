@@ -157,7 +157,6 @@ binary-indep: build install
 	dh_link -p $(x11package) usr/share/doc/$(minpackage) usr/share/doc/$(x11package)
 	dh_link -p $(minpackage) usr/share/doc/$(minpackage) usr/share/texmf/doc/fonts/cm-super
 	dh_installxfonts --package=$(x11package)
-	dh_installdefoma --package=$(x11package)
 	dh_compress
 	dh_fixperms
 	dh_installdeb
