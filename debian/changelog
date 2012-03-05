@@ -1,9 +1,9 @@
 cm-super (0.3.4-5) experimental; urgency=low
 
   * release for TL2012, rebuild with tex-common v3
-  * remove old config files in updmap.d
+  * remove old config files in updmap.d (using debian/$package.maintscript)
 
- -- Norbert Preining <preining@debian.org>  Mon, 05 Mar 2012 09:19:32 +0900
+ -- Norbert Preining <preining@debian.org>  Mon, 05 Mar 2012 09:38:22 +0900
 
 cm-super (0.3.4-4) unstable; urgency=low
 
