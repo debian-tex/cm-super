@@ -1,3 +1,10 @@
+cm-super (0.3.4-5) experimental; urgency=low
+
+  * release for TL2012, rebuild with tex-common v3
+  * remove old config files in updmap.d
+
+ -- Norbert Preining <preining@debian.org>  Mon, 05 Mar 2012 09:19:32 +0900
+
 cm-super (0.3.4-4) unstable; urgency=low
 
   * remove defoma support, but keep the defoma file for now (Closes: #648873)
