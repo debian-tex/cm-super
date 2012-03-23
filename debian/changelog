@@ -1,8 +1,10 @@
 cm-super (0.3.4-6) unstable; urgency=low
 
   * upload to unstable
+  * bump standards version to 3.9.3, no changes necessary
+  * adjust build-dep on debhelper to >= 8.1.0~
 
- -- Norbert Preining <preining@debian.org>  Thu, 22 Mar 2012 18:25:36 +0900
+ -- Norbert Preining <preining@debian.org>  Fri, 23 Mar 2012 18:30:55 +0900
 
 cm-super (0.3.4-5) experimental; urgency=low
 
