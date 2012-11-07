@@ -1,3 +1,10 @@
+cm-super (0.3.4-7) unstable; urgency=low
+
+  * make sure that the correct changelog.Debian is installed by
+    depending on the exact version of the source package (Closes: #692523)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 07 Nov 2012 13:53:27 +0900
+
 cm-super (0.3.4-6) unstable; urgency=low
 
   * upload to unstable

@@ -31,7 +31,7 @@ Package: cm-super
 Architecture: all
 Replaces: pts-tetex-cm-super
 Conflicts: pts-tetex-cm-super
-Depends: ${misc:Depends}, texlive-latex-recommended, cm-super-minimal, pfb2t1c2pfb
+Depends: ${misc:Depends}, texlive-latex-recommended, cm-super-minimal (= ${source:Version}), pfb2t1c2pfb
 Description: TeX font package (full version) with CM (EC) in Type1 in T1, T2*, TS1, X2 enc
  This package ships the full set of cm-super fonts, for a minimal variant
  install cm-super-minimal.
@@ -48,7 +48,7 @@ Description: TeX font package (full version) with CM (EC) in Type1 in T1, T2*, T
 
 Package: cm-super-x11
 Architecture: all
-Depends: cm-super-minimal, ${misc:Depends}
+Depends: cm-super-minimal (= ${source:Version}), ${misc:Depends}
 Description: Make the cm-super fonts available to X11
  This package makes the cm-super fonts available to X11. This package
  does not contain any fonts itself but allows one to reuse the cm-super
