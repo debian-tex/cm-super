@@ -157,7 +157,7 @@ binary-indep: build install
 	dh_installchangelogs -p $(minpackage) ChangeLog
 	dh_link -p $(package) usr/share/doc/$(minpackage) usr/share/doc/$(package)
 	dh_link -p $(x11package) usr/share/doc/$(minpackage) usr/share/doc/$(x11package)
-	dh_link -p $(minpackage) usr/share/doc/$(minpackage) usr/share/doc/texmf/fonts/cm-super
+	dh_link -p $(minpackage) usr/share/doc/$(minpackage) usr/share/texmf/doc/fonts/cm-super
 	dh_installxfonts --package=$(x11package)
 	dh_compress
 	dh_fixperms
