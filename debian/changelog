@@ -1,3 +1,9 @@
+cm-super (0.3.4-9) unstable; urgency=low
+
+  * upload to unstable
+
+ -- Norbert Preining <preining@debian.org>  Tue, 07 May 2013 11:40:42 +0900
+
 cm-super (0.3.4-8) experimental; urgency=low
 
   * Ack NMU
