@@ -1,3 +1,9 @@
+cm-super (0.3.4-10) UNRELEASED; urgency=medium
+
+  * allow for installation without presence of /u/s/d (Closes: 860143)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 12 Apr 2017 15:26:15 +0900
+
 cm-super (0.3.4-9) unstable; urgency=low
 
   * upload to unstable
