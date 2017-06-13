@@ -5,7 +5,7 @@ Build-Depends: debhelper (>= 8.1.0~)
 Build-Depends-Indep: tex-common (>= 4.01), pfb2t1c2pfb
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Norbert Preining <preining@debian.org>
-Standards-Version: 3.9.4
+Standards-Version: 3.9.8
 Vcs-Git: git://anonscm.debian.org/debian-tex/cm-super.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-tex/cm-super.git
 
