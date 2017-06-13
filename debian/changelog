@@ -1,8 +1,9 @@
 cm-super (0.3.4-10) experimental; urgency=medium
 
   * allow for installation without presence of /u/s/d (Closes: #860143)
+  * bump dh compat level to 9
 
- -- Norbert Preining <preining@debian.org>  Tue, 13 Jun 2017 11:13:00 +0900
+ -- Norbert Preining <preining@debian.org>  Tue, 13 Jun 2017 11:14:08 +0900
 
 cm-super (0.3.4-9) unstable; urgency=low
 
