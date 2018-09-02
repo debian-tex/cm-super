@@ -117,7 +117,7 @@ install-stamp-cmsuper-minimal: build-stamp
 	cp dvips/cm-super-minimal-*.map debian/$(minpackage)/$(MAPLOCATION)/
 	cp dvips/*.enc debian/$(minpackage)/$(ENCLOCATION)/
 	cp dvips/config.cm-super-minimal debian/$(minpackage)/$(CONFIGLOCATION)/
-	dh_installtex --package=$(minpackage) --priority=50     \
+	dh_installtex --package=$(minpackage) \
 		$(subst XXXXX,$(comma),$(patsubst %,map=MixedMapXXXXXcm-super-minimal-%.map,$(ENCODINGS)))
 	touch install-stamp-cmsuper-minimal
 
