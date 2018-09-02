@@ -2,8 +2,10 @@ cm-super (0.3.4-12) unstable; urgency=medium
 
   * remove --priority to the dh_installtex call, not needed since ages
   * bump standards version, no changes necessary
+  * VCS fields pointing to Salsa
+  * override some Adobe lintian errors (well known ones)
 
- -- Norbert Preining <preining@debian.org>  Sun, 02 Sep 2018 21:09:16 +0900
+ -- Norbert Preining <preining@debian.org>  Sun, 02 Sep 2018 21:23:55 +0900
 
 cm-super (0.3.4-11) unstable; urgency=medium
 
