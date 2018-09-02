@@ -145,6 +145,7 @@ install-stamp-cmsuper: build-stamp
 	dh_installtex --package=$(package) --priority=50	\
 		$(subst XXXXX,$(comma),$(patsubst %,map=MixedMapXXXXXcm-super-extended-%.map,$(ENCODINGS)))
 	cp debian/$(package).override debian/$(package)/usr/share/lintian/overrides/$(package)
+	cp debian/$(minpackage).override debian/$(minpackage)/usr/share/lintian/overrides/$(minpackage)
 	touch install-stamp-cmsuper
 
 
