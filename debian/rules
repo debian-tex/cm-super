@@ -131,6 +131,7 @@ install-stamp-cmsuper: build-stamp
 		usr/share/texmf/dvips/config			\
 		usr/share/lintian/overrides			\
 		usr/share/cm-super
+	dh_installdirs --package=$(minpackage) usr/share/lintian/overrides
 	cd pfb ; for pfb in *.pfb ; do \
 		bn=`basename $$pfb .pfb` ; \
 		if ! grep -q "^$$bn$$" ../debian/fonts.cm-super-minimal ; then \
