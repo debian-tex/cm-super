@@ -1,3 +1,9 @@
+cm-super (0.3.4-13) unstable; urgency=medium
+
+  * remove a forgotten --priority (Closes: #909292)
+
+ -- Norbert Preining <preining@debian.org>  Fri, 21 Sep 2018 17:02:20 +0900
+
 cm-super (0.3.4-12) unstable; urgency=medium
 
   * remove --priority to the dh_installtex call, not needed since ages
