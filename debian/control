@@ -4,10 +4,10 @@ Priority: optional
 Build-Depends: debhelper (>= 8.1.0~)
 Build-Depends-Indep: tex-common (>= 4.01), pfb2t1c2pfb
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
-Uploaders: Norbert Preining <preining@debian.org>
+Uploaders: Norbert Preining <norbert@preining.info>
 Standards-Version: 4.2.1
-Vcs-Git: https://salsa.debian.org/tex-team/cm-super.git
-Vcs-Browser: https://salsa.debian.org/tex-team/cm-super
+Vcs-Git: https://github.com/debian-tex/cm-super.git
+Vcs-Browser: https://github.com/debian-tex/cm-super
 
 Package: cm-super-minimal
 Architecture: all
