@@ -212,7 +212,7 @@ cm-super (0.3.3-1) unstable; urgency=low
   * changed postinst, postrm to work with tetex2
   * Hack around that the pfb files are generated at install time and the
     md5sums are wrong if we ship empty files instead.
-  * bump Standards Version to 3.6.2.1 and debhelper compat to 4 
+  * bump Standards Version to 3.6.2.1 and debhelper compat to 4
   * add Replaces for pts-tetex-cm-super
   * install map and enc files in the correct locations
   * package renamed and new maintainer

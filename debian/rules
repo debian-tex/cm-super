@@ -71,8 +71,8 @@ clean: debian/control
 	dh_testdir
 	dh_testroot
 	-rm -f build-stamp
-	-rm -f install-stamp 
-	-rm -f install-stamp-cmsuper 
+	-rm -f install-stamp
+	-rm -f install-stamp-cmsuper
 	-rm -f install-stamp-cmsuper-minimal
 	-rm -f install-stamp-cmsuperx11
 	-(cd dvips ; rm -f $(MINFILES) $(EXTFILES) tmp* )
@@ -95,7 +95,7 @@ install-stamp-cmsuperx11: build-stamp
 		gunzip -c afm/$$bn.afm.gz > debian/$(x11package)/usr/share/texmf/fonts/afm/public/cm-super/$$bn.afm ; \
 		echo "usr/share/texmf/fonts/afm/public/cm-super/$$bn.afm usr/share/fonts/X11/Type1/$$bn.afm" >> debian/$(x11package).links ; \
 	done
-	# 
+	#
 	dh_installdirs  --package=$(x11package)  etc/X11/fonts/Type1
 	cp debian/fonts.scale debian/$(x11package)/etc/X11/fonts/Type1/cm-super-x11.scale
 	touch install-stamp-cmsuperx11
@@ -123,7 +123,7 @@ install-stamp-cmsuper-minimal: build-stamp
 
 
 install-stamp-cmsuper: build-stamp
-	dh_testdir 
+	dh_testdir
 	dh_testroot
 	dh_installdirs	--package=$(package)			\
 		usr/share/texmf/fonts/type1/public/cm-super	\
