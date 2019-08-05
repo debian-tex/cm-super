@@ -7,10 +7,6 @@ if [ $# -eq 2 ]  && ( [ "$1" = "install" ] || [ "$1" = "upgrade" ] ); then
     fi
 fi
 
-if dpkg-maintscript-helper supports rm_conffile 2>/dev/null; then
-  dpkg-maintscript-helper rm_conffile /etc/defoma/hints/cm-super-x11.hints 0.3.4-3 -- "$@"
-fi
-
 #DEBHELPER#
 
 exit 0
