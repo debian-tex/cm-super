@@ -8,6 +8,7 @@ cm-super (0.3.4-15) UNRELEASED; urgency=medium
     - P: no-homepage-field
     - P: package-lacks-versioned-build-depends-on-debhelper
     - P: no-dep5-copyright
+    - I: out-of-date-standards-version (bumped to 4.4.0, no changes)
 
  -- Hilmar Preusse <hille42@web.de>  Mon, 05 Aug 2019 15:02:23 +0200
 
