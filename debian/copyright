@@ -1,32 +1,54 @@
-This package was compiled
-by Szabó Péter pts@fazekas.hu on Sat, 29 Mar 2003 22:32:12 +0100.
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: cm-super
+Source: <http://www.ctan.org/tex-archive/fonts/ps-type1/cm-super/>
 
-Maintained for Debian by Norbert Preining <preining@debian.org>
+Files: *
+Copyright: 2001, 2002 Vladimir Volovich <vvv@vsu.ru>.
+License: GPL-2+ or GPL_Font_exception
 
-The original package was:
-  CM-Super font package version 0.3.3 (May 25, 2002)
-  Copyright (c) 2001, 2002 Vladimir Volovich <vvv@vsu.ru>.
+Files: debian/*
+Copyright: 2003 Szabó Péter <pts@fazekas.hu>
+           2004 - 2018 Norbert Preining <preining@debian.org>
+License: GPL-3+
 
-  It can be downloaded from
-  http://www.ctan.org/tex-archive/fonts/ps-type1/cm-super/
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License with
+ the Debian GNU/Linux distribution in file /usr/share/common-licenses/GPL;
+ if not, write to the Free Software Foundation, Inc., 51 Franklin St, 
+ Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-This package is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+License: GPL_Font_exception
+ As a special exception, permission is granted to include these font
+ programs in a Postscript or PDF file that consists of a document that
+ contains text to be displayed or printed using these fonts, regardless
+ of the conditions or license applying to the document itself.
 
-As a special exception, permission is granted to include these font
-programs in a Postscript or PDF file that consists of a document that
-contains text to be displayed or printed using these fonts, regardless
-of the conditions or license applying to the document itself.
-
-This package is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License with
-the Debian GNU/Linux distribution in file /usr/share/common-licenses/GPL;
-if not, write to the Free Software Foundation, Inc., 51 Franklin St, 
-Fifth Floor, Boston, MA  02110-1301 USA
-
+License: GPL-3+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
