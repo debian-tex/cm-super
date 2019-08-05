@@ -1,8 +1,12 @@
 cm-super (0.3.4-15) UNRELEASED; urgency=medium
 
   * Add me to list of Uploaders.
-  * Kill "W: maintainer-script-should-not-use-dpkg-maintscript-helper".
   * Change source format to "3.0 (quilt)".
+  * lintian:
+    - W: maintainer-script-should-not-use-dpkg-maintscript-helper
+    - P: file-contains-trailing-whitespace
+    - P: no-homepage-field
+    - P: package-lacks-versioned-build-depends-on-debhelper
 
  -- Hilmar Preusse <hille42@web.de>  Mon, 05 Aug 2019 15:02:23 +0200
 
