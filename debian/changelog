@@ -1,4 +1,4 @@
-cm-super (0.3.4-15) UNRELEASED; urgency=medium
+cm-super (0.3.4-15) unstable; urgency=medium
 
   * Add me to list of Uploaders.
   * Change source format to "3.0 (quilt)".
@@ -8,9 +8,9 @@ cm-super (0.3.4-15) UNRELEASED; urgency=medium
     - P: no-homepage-field
     - P: package-lacks-versioned-build-depends-on-debhelper
     - P: no-dep5-copyright
-    - I: out-of-date-standards-version (bumped to 4.4.0, no changes)
+    - I: out-of-date-standards-version (bumped to 4.4.0, no changes needed)
 
- -- Hilmar Preusse <hille42@web.de>  Mon, 05 Aug 2019 15:02:23 +0200
+ -- Hilmar Preusse <hille42@web.de>  Tue, 06 Aug 2019 10:26:40 +0200
 
 cm-super (0.3.4-14) unstable; urgency=medium
 
