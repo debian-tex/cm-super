@@ -1,3 +1,9 @@
+cm-super (0.3.4-16) UNRELEASED; urgency=medium
+
+  * Use set -e rather than passing -e on the shebang-line.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Mon, 28 Oct 2019 17:26:53 +0000
+
 cm-super (0.3.4-15) unstable; urgency=medium
 
   * Add me to list of Uploaders.

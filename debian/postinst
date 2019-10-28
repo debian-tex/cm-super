@@ -1,6 +1,8 @@
-#!/bin/sh -e
+#!/bin/sh
 # postinst for cm-super-minimal
 
 #DEBHELPER#
+
+set -e
 
 exit 0
