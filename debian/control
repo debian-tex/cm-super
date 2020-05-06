@@ -6,7 +6,7 @@ Build-Depends-Indep: tex-common (>= 4.01), pfb2t1c2pfb
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Norbert Preining <norbert@preining.info>,
            Hilmar Preusse <hille42@web.de>
-Standards-Version: 4.4.1
+Standards-Version: 4.5.0
 Vcs-Git: https://github.com/debian-tex/cm-super.git
 Vcs-Browser: https://github.com/debian-tex/cm-super
 Homepage: https://ctan.org/tex-archive/fonts/ps-type1/cm-super
