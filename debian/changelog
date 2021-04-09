@@ -1,13 +1,16 @@
 cm-super (0.3.4-16) UNRELEASED; urgency=medium
 
+  [ Debian Janitor ]
   * Use set -e rather than passing -e on the shebang-line.
-  * Update standards version to 4.4.1, no changes needed.
   * Bump debhelper from old 9 to 12.
   * Add missing build dependency on dh addon.
   * Refer to specific version of license GPL-2+.
   * Update standards version to 4.5.0, no changes needed.
 
- -- Debian Janitor <janitor@jelmer.uk>  Mon, 28 Oct 2019 17:26:53 +0000
+  [ Hilmar Preusse ]
+  * Hand over some files from clean target to d/clean.
+
+ -- Hilmar Preusse <hille42@web.de>  Fri, 09 Apr 2021 23:29:02 +0200
 
 cm-super (0.3.4-15) unstable; urgency=medium
 

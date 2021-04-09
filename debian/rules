@@ -70,14 +70,8 @@ build-stamp:
 clean: debian/control
 	dh_testdir
 	dh_testroot
-	-rm -f build-stamp
-	-rm -f install-stamp
-	-rm -f install-stamp-cmsuper
-	-rm -f install-stamp-cmsuper-minimal
-	-rm -f install-stamp-cmsuperx11
 	-(cd dvips ; rm -f $(MINFILES) $(EXTFILES) tmp* )
 	-rm -f debian/$(x11package).links debian/$(package).links
-	-rm -f cm-super.t1c
 	dh_clean
 
 install: install-stamp
