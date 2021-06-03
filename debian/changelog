@@ -10,6 +10,12 @@ cm-super (0.3.4-16) UNRELEASED; urgency=medium
   [ Hilmar Preusse ]
   * Hand over some files from clean target to d/clean.
 
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends-Indep: Drop versioned constraint on tex-common.
+    + cm-super-minimal: Drop versioned constraint on cm-super in Replaces.
+    + Remove 3 maintscript entries from 3 files.
+
  -- Hilmar Preusse <hille42@web.de>  Fri, 09 Apr 2021 23:29:02 +0200
 
 cm-super (0.3.4-15) unstable; urgency=medium
