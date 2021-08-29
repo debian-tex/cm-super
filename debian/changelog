@@ -16,6 +16,7 @@ cm-super (0.3.4-16) UNRELEASED; urgency=medium
     + cm-super-minimal: Drop versioned constraint on cm-super in Replaces.
     + Remove 3 maintscript entries from 3 files.
   * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
 
  -- Hilmar Preusse <hille42@web.de>  Fri, 09 Apr 2021 23:29:02 +0200
 
