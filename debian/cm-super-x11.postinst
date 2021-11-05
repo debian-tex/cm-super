@@ -2,14 +2,6 @@
 
 case "$1" in
     configure)
-        # remove /usr/share/doc/cm-super-x11 directory and make it a link
-	if ! [ -L /usr/share/doc/cm-super-x11 ] ; then
-	  if [ -d /usr/share/doc/cm-super-x11 ] ; then
-	    # it should not contain anything by now ...
-	    rmdir /usr/share/doc/cm-super-x11
-	    ln -s cm-super-minimal /usr/share/doc/cm-super-x11
-	  fi
-	fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
