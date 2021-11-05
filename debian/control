@@ -7,6 +7,7 @@ Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Norbert Preining <norbert@preining.info>,
            Hilmar Preusse <hille42@web.de>
 Standards-Version: 4.5.1
+Rules-Requires-Root: binary-targets
 Vcs-Git: https://github.com/debian-tex/cm-super.git
 Vcs-Browser: https://github.com/debian-tex/cm-super
 Homepage: https://ctan.org/tex-archive/fonts/ps-type1/cm-super

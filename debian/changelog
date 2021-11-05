@@ -6,9 +6,11 @@ cm-super (0.3.4-16) UNRELEASED; urgency=medium
     - X: maintainer-script-switches-dir-to-symlink-unsafely
     - W: cm-super source: redundant-build-prerequisites tex-common, tex-common
     - P: *: maintainer-script-without-set-e
+    - P: silent-on-rules-requiring-root
     Lintian Override:
     - W: national-encoding usr/share/cm-super/cm-super.t1c
     - I: font-in-non-font-package & font-outside-font-dir
+    - I: cm-super source: debian-watch-file-is-missing
 
   [ Debian Janitor ]
   * Use set -e rather than passing -e on the shebang-line.
