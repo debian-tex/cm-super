@@ -149,7 +149,7 @@ binary-arch:
 binary-indep: build install
 	dh_testdir
 	dh_testroot
-	dh_installdocs -p $(minpackage) FAQ README TODO debian/README.teTeX2
+	dh_installdocs -p $(minpackage) FAQ README TODO
 	dh_installchangelogs -p $(minpackage) ChangeLog
 	dh_link -p $(package) usr/share/doc/$(minpackage) usr/share/doc/$(package)
 	dh_link -p $(x11package) usr/share/doc/$(minpackage) usr/share/doc/$(x11package)
