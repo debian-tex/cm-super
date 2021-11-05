@@ -1,3 +1,5 @@
+cm-super-minimal: font-in-non-font-package
+cm-super-minimal: font-outside-font-dir
 cm-super-minimal: license-problem-font-adobe-copyrighted-fragment-no-credit usr/share/texmf/fonts/type1/public/cm-super/sfbbx10.pfb
 cm-super-minimal: license-problem-font-adobe-copyrighted-fragment-no-credit usr/share/texmf/fonts/type1/public/cm-super/sfbi1000.pfb
 cm-super-minimal: license-problem-font-adobe-copyrighted-fragment-no-credit usr/share/texmf/fonts/type1/public/cm-super/sfbl1000.pfb

@@ -1,3 +1,6 @@
+cm-super: national-encoding usr/share/cm-super/cm-super.t1c
+cm-super: font-in-non-font-package
+cm-super: font-outside-font-dir
 cm-super: md5sum-mismatch usr/share/texmf/fonts/type1/public/cm-super/sfit0900.pfb
 cm-super: md5sum-mismatch usr/share/texmf/fonts/type1/public/cm-super/sfbso8.pfb
 cm-super: md5sum-mismatch usr/share/texmf/fonts/type1/public/cm-super/sfst1200.pfb
