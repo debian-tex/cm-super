@@ -2,7 +2,9 @@ cm-super (0.3.4-16) UNRELEASED; urgency=medium
 
   [ Hilmar Preusse ]
   * Hand over some files from clean target to d/clean.
-  * Lintian: X: maintainer-script-switches-dir-to-symlink-unsafely
+  * Lintian:
+    - X: maintainer-script-switches-dir-to-symlink-unsafely
+    - W: cm-super source: redundant-build-prerequisites tex-common, tex-common
 
   [ Debian Janitor ]
   * Use set -e rather than passing -e on the shebang-line.
