@@ -1,7 +1,8 @@
-cm-super (0.3.4-16) UNRELEASED; urgency=medium
+cm-super (0.3.4-16) unstable; urgency=medium
 
   [ Hilmar Preusse ]
   * Hand over some files from clean target to d/clean.
+  * Remove debian/README.teTeX2, I guess nobody does backports to teTeX 2.
   * Lintian:
     - X: maintainer-script-switches-dir-to-symlink-unsafely
     - W: cm-super source: redundant-build-prerequisites tex-common, tex-common
@@ -24,7 +25,7 @@ cm-super (0.3.4-16) UNRELEASED; urgency=medium
   * Update standards version to 4.5.1, no changes needed.
   * Remove empty maintainer scripts: None (postinst)
 
- -- Hilmar Preusse <hille42@web.de>  Fri, 09 Apr 2021 23:29:02 +0200
+ -- Hilmar Preusse <hille42@web.de>  Fri, 05 Nov 2021 22:58:57 +0100
 
 cm-super (0.3.4-15) unstable; urgency=medium
 
