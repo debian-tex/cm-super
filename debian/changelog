@@ -5,6 +5,7 @@ cm-super (0.3.4-16) UNRELEASED; urgency=medium
   * Lintian:
     - X: maintainer-script-switches-dir-to-symlink-unsafely
     - W: cm-super source: redundant-build-prerequisites tex-common, tex-common
+    - P: *: maintainer-script-without-set-e
 
   [ Debian Janitor ]
   * Use set -e rather than passing -e on the shebang-line.
